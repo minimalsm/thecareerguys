@@ -6,10 +6,11 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5px;
   padding-bottom: 2px;
   flex: 1;
 
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid #CFD8DC;
  
   .logo-wrapper {
     flex: 1;
@@ -17,7 +18,7 @@ const StyledNav = styled.nav`
   
   .logo {
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
   }
   
   .nav-wrapper {
@@ -33,7 +34,7 @@ const StyledNav = styled.nav`
     display: flex;
     flex: 1;
     /* border: 4px solid mistyrose; */
-    margin-bottom: 0px;
+    margin-bottom: 15px;
   }
 
   a {
@@ -45,6 +46,11 @@ const StyledNav = styled.nav`
     padding: 0.5rem 0.55vw;
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+
+  a:hover { 
+    color: #448aff;
+    border-bottom: 2.5px solid #448aff;
   }
 
   @media only screen and (max-width: 1000px) {
