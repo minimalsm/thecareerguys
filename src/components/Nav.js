@@ -48,7 +48,11 @@ const StyledNav = styled.nav`
     margin-bottom: 0;
   }
 
-  a:hover { 
+  a:hover {
+    color: #448aff;
+  }
+
+  a[aria-current="page"] { 
     color: #448aff;
     border-bottom: 2.5px solid #448aff;
   }
@@ -88,7 +92,7 @@ export default function Nav() {
       </div>
       <div class="nav-wrapper">
         <ul>
-          <Link to='/careers'>Careers</Link>
+          <Link to='/'>Careers</Link>
           <Link to='/education'>Education</Link>
           <Link to='/funding'>Funding</Link>
           <Link to='/about'>About</Link>
