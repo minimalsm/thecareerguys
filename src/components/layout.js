@@ -13,6 +13,7 @@ import Header from "./header"
 import "normalize.css"
 import "./layout.css"
 import "../styles/global.css"
+import Nav from "./Nav"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,10 +25,11 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
+  
+  // <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Nav />
       <div
         style={{
           margin: `0 auto`,
