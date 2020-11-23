@@ -85,7 +85,7 @@ const StyledNav = styled.nav`
 `
 
 
-export default function Nav() {
+const Nav = () => {
   return (
     <StyledNav>
       <div class='logo-wrapper'>
@@ -103,3 +103,5 @@ export default function Nav() {
     </StyledNav>
   )
 }
+
+export default Nav
