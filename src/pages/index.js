@@ -34,7 +34,9 @@ const IndexPage = () => (
     style={{
       margin: `0 auto`,
       maxWidth: 1024,
-      padding: `0 1.0875rem 1.45rem`
+      padding: `0 1.0875rem 1.45rem`,
+      paddingTop: `20px`,
+      paddingBottom: `25px`
     }}
   >
       <h2>Popular Careers</h2>
@@ -52,6 +54,7 @@ const IndexPage = () => (
       }}
     >
       <h2>Education</h2>
+      <p>The UK has some of the best further education in the world. We've arranged the options for you to help you make the best choice for you.</p>
     </div>
 
     {/* Funding Section */}
@@ -63,6 +66,7 @@ const IndexPage = () => (
       }}
     >
       <h2>Funding</h2>
+      <p>Don't let money worries be the reason you don't make the switch to a new career. Checck out our resources for all the different ways of funding your new career!</p>
     </div>
   </>
 )
