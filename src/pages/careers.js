@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import ArgsJobCard from "../components/ArgsJobCard"
 
 const Search = ({ value, onChange }) => {
   return (
@@ -16,9 +17,12 @@ const Search = ({ value, onChange }) => {
 
 const CareersPage = () => {
   const [ searchTerm, setSearchTerm ] = useState('')
+  const [ results, setResults ] = useState([])
 
   const handleNewSearch = (e) => {
-    setSearchTerm(e.target.value)
+    let value = e.target.value;
+    setSearchTerm(value)
+    console.log(searchTerm)
     fetchData()
   }
 
@@ -28,9 +32,13 @@ const CareersPage = () => {
      fetch(`http://api.lmiforall.org.uk/api/v1/soc/search?q=${searchTerm}`)
        .then(response => response.json()) // parse JSON from request
        .then(resultData => {
-         console.log(resultData[1])
+         setResults(resultData)
        }) // set data for the number of stars
    }
+
+   const resultsFiltered = results.filter((result, idx) => idx < 10)
+   const len = resultsFiltered.length;
+   console.log('Results:', resultsFiltered)
 
   return (
     <Layout>
@@ -40,6 +48,19 @@ const CareersPage = () => {
         value={searchTerm}
         onChange={handleNewSearch}
       />
+
+     {resultsFiltered && len > 0 
+      ? 
+      (
+        resultsFiltered.map((result) => {
+          return (
+            <ArgsJobCard title={result.title} soc={result.soc}/> 
+          )
+        })
+      )
+      : 'No results found'}
+
+
     </Layout>
   )
 }
