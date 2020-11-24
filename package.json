@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "chart.js": "^2.9.4",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-manifest": "^2.6.1",
@@ -18,6 +19,7 @@
     "prop-types": "^15.7.2",
     "query-string": "^6.13.7",
     "react": "^16.12.0",
+    "react-chartjs-2": "^2.11.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.2.1",
