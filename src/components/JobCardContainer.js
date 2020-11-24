@@ -5,7 +5,6 @@ import JobCard from './JobCard'
 const StyledJobCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-
   .jobcard {
     flex: 1 1 40%;
   }
