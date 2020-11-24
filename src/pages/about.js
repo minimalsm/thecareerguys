@@ -4,14 +4,29 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
 import styled from 'styled-components'
+import GoogleMap from "../components/GoogleMap"
 
 
 const FlexTest = styled.div`
   display: flex;
   justify-content: space-around;
 
-  .flexWrapper {
+  .flexWrapperLeft {
     max-width: 50%;
+  }
+
+  .flexWrapperRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  @media only screen and (max-width: 950px) {
+    flex-wrap: wrap;
+
+    .flexWrapperLeft {
+      max-width: 100%;
+    }
   }
 `
 
@@ -49,7 +64,7 @@ const SetImg = styled(Img)`
 const AboutPage = ({ data }) => (
   <Layout>
   <FlexTest>
-  <div class='flexWrapper'>
+  <div class='flexWrapperLeft'>
     <SEO title="About Us" />
     <h1>Who We Are</h1>
     <p>Nostrud irure sunt do Lorem aliqua elit ut labore dolore velit esse cupidatat. Ex sit eiusmod tempor non eu tempor veniam occaecat laboris quis ut mollit magna ex. Reprehenderit ad consectetur anim id deserunt dolore ipsum aliquip amet. Eiusmod mollit incididunt ullamco nostrud. Dolore do tempor veniam voluptate esse nisi esse sit consectetur officia nostrud consectetur enim in. Non fugiat incididunt voluptate qui id ex nostrud est aliqua reprehenderit laboris ullamco. Veniam occaecat ipsum ad ea in laboris nulla incididunt velit nisi quis ullamco proident labore.</p>
@@ -81,12 +96,20 @@ const AboutPage = ({ data }) => (
     </StyledFlexContainer>
   </div>
 
-    <div class='flexWrapper'>
+    <div class='flexWrapperRight'>
       <h3>Find Us Here</h3>
-      <Img fluid={data.typingGatsbyImage.childImageSharp.fluid} />
-      <p>Google Maps here</p>
-      </div>
+      
+      <GoogleMap />
+
+      <span>123 Fake St</span>
+      <span>Glasgow</span>
+      <span>G12 3AB</span>
+
+      <button>Want to Talk? Get in touch.</button>
+    </div>
     </FlexTest>
+
+
   </Layout>
 )
 
