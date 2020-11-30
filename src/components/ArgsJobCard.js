@@ -4,10 +4,15 @@ import styled from 'styled-components'
 import { navigate } from '@reach/router'
 
 const StyledJobCard = styled.div`
+  background: white;
   border: 1px solid black;
   border-radius: 3px;
   padding: 1%;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%;
+  flex-wrap: wrap;
 
   .title {
     font-family: 'Raleway';

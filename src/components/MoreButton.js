@@ -1,8 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.span`
   display: block;
   margin: auto;
   width: 10vw;
@@ -26,7 +25,7 @@ const StyledLink = styled(Link)`
 
 export default function MoreButton(props) {
   return (
-    <StyledLink>
+    <StyledLink onClick={props.onClick}>
       {props.name}
     </StyledLink>
   )
