@@ -8,8 +8,10 @@ const StyledFadeIn = styled(FadeIn)`
   flex-wrap: wrap;
   flex: 1 1 45%;
 
+  margin: 5px auto;
+
   @media screen and (max-width: 800px) {
-    min-width: 100%!important;
+    flex-basis: 100%;
   }
 `
 

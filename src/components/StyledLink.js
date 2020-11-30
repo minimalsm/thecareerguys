@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from '@reach/router'
 
-const StyledLink = styled.span`
-  /* display: block; */
+const StyledLinkComponent = styled(Link)`
+  display: block;
   margin: auto;
-  width: 45%;
+  width: 100%;
   padding: 12px 8px;
   border: 1px solid #448aff;
   border-radius: 1px;
@@ -23,10 +24,12 @@ const StyledLink = styled.span`
             0 16px 16px rgba(0,0,0,0.05);
 `
 
-export default function MoreButton(props) {
+const StyledLink = (props) => {
   return (
-    <StyledLink onClick={props.onClick}>
+    <StyledLinkComponent to={props.to}>
       {props.name}
-    </StyledLink>
+    </StyledLinkComponent>
   )
 }
+
+export default StyledLink;

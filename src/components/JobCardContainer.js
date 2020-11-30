@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ArgsJobCard from './ArgsJobCard'
-import JobCard from './JobCard'
 import MoreButton from './MoreButton'
 
 
 const StyledJobCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+
   .jobcard {
     flex: 1 1 40%;
   }
