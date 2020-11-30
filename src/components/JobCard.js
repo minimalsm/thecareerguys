@@ -54,7 +54,7 @@ const StyledJobCard = styled.div`
   }
 `
 
-const ArgsJobCard = ({ soc, title }) => {
+const JobCard = ({ soc, title }) => {
   return (
     <StyledFadeIn duration="0.8s" delay="0s">
       <StyledJobCard>
@@ -66,4 +66,4 @@ const ArgsJobCard = ({ soc, title }) => {
   )
 }
 
-export default ArgsJobCard
+export default JobCard

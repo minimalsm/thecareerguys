@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import SEO from "../components/seo"
 import styled from 'styled-components'
-import GoogleMap from "../components/GoogleMap"
+import GoogleMap from "../components/About/GoogleMap"
 
 
 const FlexTest = styled.div`
