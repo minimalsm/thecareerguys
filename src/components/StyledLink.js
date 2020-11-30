@@ -5,7 +5,7 @@ import { Link } from '@reach/router'
 const StyledLinkComponent = styled(Link)`
   display: block;
   margin: auto;
-  width: 100%;
+  width: 85%;
   padding: 12px 8px;
   border: 1px solid #448aff;
   border-radius: 1px;
