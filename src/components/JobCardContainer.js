@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import ArgsJobCard from './ArgsJobCard'
 import JobCard from './JobCard'
 import MoreButton from './MoreButton'
+import { AnimateOnChange } from 'react-animation'
+import { Wobble, FadeIn, FadeOut } from 'animate-css-styled-components';
+
 
 const StyledJobCardContainer = styled.div`
   display: flex;
@@ -24,18 +27,20 @@ export default function JobCardContainer() {
 
   return (
     <StyledJobCardContainer>
-      <ArgsJobCard class='jobcard' title={'Lalala'} />
-      <ArgsJobCard class='jobcard' title={'Lalala'} />
+      <ArgsJobCard class='jobcard' title={'da'} soc={2136} salary={0} />
+      <ArgsJobCard class='jobcard' title={'da'} soc={2136} salary={0} />
+      <ArgsJobCard class='jobcard' title={'da'} soc={2136} salary={0} />
+      <ArgsJobCard class='jobcard' title={'da'} soc={2136} salary={0} />
 
-      <JobCard class='jobcard' />
-      <JobCard class='jobcard' />
+
 
       {showAll ?  
-        (<>
-            <JobCard class='jobcard' /> 
-            <JobCard class='jobcard' /> 
-            <JobCard class='jobcard' /> 
-            <JobCard class='jobcard' /> 
+        (
+          <>
+            <ArgsJobCard class='jobcard' title={'Lalala'} soc={2136} salary={0} />
+            <ArgsJobCard class='jobcard' title={'Lalala'} soc={2136} salary={0} />
+            <ArgsJobCard class='jobcard' title={'Lalala'} soc={2136} salary={0} />
+            <ArgsJobCard class='jobcard' title={'Lalala'} soc={2136} salary={0} />
           </>) 
         : 
           <>

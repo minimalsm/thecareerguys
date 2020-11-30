@@ -1,7 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { navigate } from '@reach/router'
+import { FadeIn } from 'animate-css-styled-components';
+
+const StyledFadeIn = styled(FadeIn)`
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 45%;
+`
 
 const StyledJobCard = styled.div`
   background: white;
@@ -44,11 +50,13 @@ const StyledJobCard = styled.div`
 
 const ArgsJobCard = ({ soc, title }) => {
   return (
-    <StyledJobCard>
-      <p class="title">{title}</p>
-      <p class="salary">Average UK Salary: £45,000</p>
-      <Link to={`/job?soc=${soc}`}>Learn More</Link>
-    </StyledJobCard>
+    <StyledFadeIn duration="0.8s" delay="0s">
+      <StyledJobCard>
+        <p class="title">{title}</p>
+        <p class="salary">Average UK Salary: £45,000</p>
+        <Link to={`/job?soc=${soc}`}>Learn More</Link>
+      </StyledJobCard>
+    </StyledFadeIn>
   )
 }
 

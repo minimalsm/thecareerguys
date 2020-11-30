@@ -9,6 +9,7 @@ const StyledJobCard = styled.div`
   padding: 1%;
   margin: 5px;
 
+
   .title {
     font-family: 'Raleway';
     font-weight: 600;
@@ -39,11 +40,12 @@ const StyledJobCard = styled.div`
 
 const JobCard = () => {
   return (
-    <StyledJobCard>
-      <p class="title">Professional and software development professionals</p>
-      <p class="salary">Average UK Salary: £45,000</p>
-      <Link to='/job'>Learn More</Link>
-    </StyledJobCard>
+
+      <StyledJobCard>
+        <p class="title">Professional and software development professionals</p>
+        <p class="salary">Average UK Salary: £45,000</p>
+        <Link to='/job'>Learn More</Link>
+      </StyledJobCard>
   )
 }
 
