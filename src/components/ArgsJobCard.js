@@ -7,6 +7,10 @@ const StyledFadeIn = styled(FadeIn)`
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 45%;
+
+  @media screen and (max-width: 800px) {
+    min-width: 100%!important;
+  }
 `
 
 const StyledJobCard = styled.div`
