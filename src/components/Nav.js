@@ -53,7 +53,7 @@ const StyledNav = styled.nav`
     color: #448aff;
   }
 
-  a[aria-current="page"] { 
+  ul a[aria-current="page"] { 
     color: #448aff;
     border-bottom: 2.5px solid #448aff;
   }
@@ -89,11 +89,11 @@ const Nav = () => {
   return (
     <StyledNav>
       <div class='logo-wrapper'>
-        <h2 class='logo'>TheCareerGuys</h2>
+        <h2 class='logo'><Link to='/'>TheCareerGuys</Link></h2>
       </div>
       <div class="nav-wrapper">
         <ul>
-          <Link to='/'>Careers</Link>
+          <Link to='/careers'>Careers</Link>
           <Link to='/education'>Education</Link>
           <Link to='/funding'>Funding</Link>
           <Link to='/about'>About</Link>
