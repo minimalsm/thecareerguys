@@ -13,21 +13,22 @@ const StyledDiv = styled.div`
     padding: 8px;
     border: 1px solid black;
     border-radius: 1px;
+    border-right-width: 4px;
+    border-bottom-width: 4px;
     width: 100%;
     margin-top: 5px;
 
     font-family: 'Raleway';
     font-weight: 700;
     text-decoration: none;
-    background-color: #448aff;
+    background-color: #094EC3;
     color: #fff;
     text-align: center;
 
-    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
-              0 2px 2px rgba(0,0,0,0.20), 
-              0 4px 4px rgba(0,0,0,0.15), 
-              0 8px 8px rgba(0,0,0,0.10),
-              0 16px 16px rgba(0,0,0,0.05);
+
+    :hover {
+      background-color: #0A5FCF;
+    }
   }  
   
 `

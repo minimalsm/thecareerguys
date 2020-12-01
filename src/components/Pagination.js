@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`
-  margin-top: 25px;
+  margin: 25px 0;
 
   ul {
     list-style: none;
@@ -19,12 +19,14 @@ const StyledDiv = styled.div`
 
     :hover {
       cursor: pointer;
-      background-color: #448aff;
+      background-color: #094EC3;
+      color: #fff;
     }
   }
 
   .current {
-    background-color: #448aff;
+    background-color: #094EC3;
+    color: #fff;
     font-weight: 700;
   }
 `

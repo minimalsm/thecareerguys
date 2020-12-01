@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import StyledLink from '../StyledLink'
 
 const StyledSection = styled.section`
-  margin: 0 auto;
+  margin: 20px auto 0px auto;
   max-width: 1024px;
   padding: 0 1.0875rem 1.45rem;
 `

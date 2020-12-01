@@ -29,18 +29,15 @@ const StyledImg = styled.img`
   margin-right: 20px;
 `;
 
-// <StyledAnimate 
-// Animation={[RotateInDownLeft, Bounce, Jello]}
-// duration={["3s", "3s", "15s"]}
-// delay={["1s", "0s", "1s"]}
-// >
-
 const ContactPage = () => (
   <Layout>
     <FlexContainer>
     
-      <StyledAnimate Animation={[RotateInDownLeft]} duration={["0s"]} delay={["0s"]}>
-        <StyledImg src={TypingMan} />
+    <StyledAnimate 
+    Animation={[RotateInDownLeft, Bounce, Jello]}
+    duration={["3s", "3s", "15s"]}
+    delay={["1s", "0s", "1s"]}
+    >        <StyledImg src={TypingMan} />
       </StyledAnimate>
 
       <ContactForm />

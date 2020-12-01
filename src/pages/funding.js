@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import FundingOption from '../components/FundingOption'
 import { graphql } from 'gatsby'
 import Image from 'gatsby-image'
+import OtherPagesLinkContainer from "../components/OtherPagesLinkContainer"
 
 const FundingPage = ({ data }) => (
   <Layout>
@@ -28,6 +29,13 @@ const FundingPage = ({ data }) => (
       content={"The UK government’s website is a fantastic resource for information regarding your funding your studies and further education. The website is remarkably easy to navigate and with the government’s seal of approval you can guarantee accuracy of information more so than many other portals."} 
       link={"https://www.gov.uk/browse/education/student-finance"}
       image={data.govUkGatsbyImage.childImageSharp.fluid}
+    />
+
+    <OtherPagesLinkContainer 
+      firstName={'Explore Careers'}
+      firstLink={'careers'}
+      secondName={'Explore Education Options'}
+      secondLink={'education'}
     />
   </Layout>
 )
