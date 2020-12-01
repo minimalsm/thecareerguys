@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import SEO from "../components/seo"
 import styled from 'styled-components'
 import GoogleMap from "../components/About/GoogleMap"
+import FindUsHere from "../components/About/FindUsHere"
 
 
 const FlexTest = styled.div`
@@ -15,11 +16,11 @@ const FlexTest = styled.div`
     max-width: 50%;
   }
 
-  .flexWrapperRight {
+  /* .flexWrapperRight {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  }
+  } */
 
   @media only screen and (max-width: 950px) {
     flex-wrap: wrap;
@@ -96,17 +97,9 @@ const AboutPage = ({ data }) => (
     </StyledFlexContainer>
   </div>
 
-    <div class='flexWrapperRight'>
-      <h3>Find Us Here</h3>
-      
-      <GoogleMap />
 
-      <span>123 Fake St</span>
-      <span>Glasgow</span>
-      <span>G12 3AB</span>
-
-      <button>Want to Talk? Get in touch.</button>
-    </div>
+    <FindUsHere class='flexWrapperRight'/>
+    
     </FlexTest>
 
 
