@@ -15,14 +15,14 @@ export default function PieChart({ name, soc, scotlandSalary }) {
   }
 
   useEffect(() => {
-    fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A10`)
+    fetch(`https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A10`)
     .then(response => response.json()) 
     .then(data => setWalesSalary(getMostRecentSalary(data)))
     .catch(error => setErrorOnPayFetch(true))
   }, [])
 
   useEffect(() => {
-    fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A12`)
+    fetch(`https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A12`)
     .then(response => response.json())
     .then(data => setNorthernIrelandSalary(getMostRecentSalary(data)))
     .catch(error => setErrorOnPayFetch(true))

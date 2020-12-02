@@ -27,7 +27,7 @@ const CareersPage = () => {
   }
 
    async function fetchData() {
-     fetch(`http://api.lmiforall.org.uk/api/v1/soc/search?q=${searchTerm}`)
+     fetch(`https://api.lmiforall.org.uk/api/v1/soc/search?q=${searchTerm}`)
        .then(response => response.json())
        .then(resultData => {
          setResults(resultData)

@@ -19,14 +19,14 @@ const JobPage = ({ location }) => {
   }
 
   useEffect(() => {
-    fetch(`http://api.lmiforall.org.uk/api/v1/soc/code/${soc}`)
+    fetch(`https://api.lmiforall.org.uk/api/v1/soc/code/${soc}`)
     .then(response => response.json())
     .then(data => setJobData(data))
     .catch(error => console.log(error))
   }, [])
 
   useEffect(() => {
-    fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A11`)
+    fetch(`https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A11`)
     .then(response => response.json()) 
     .then(data => setScotlandSalary(getMostRecentSalary(data)))
     .catch(error => console.log(error))
