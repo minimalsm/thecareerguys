@@ -5,6 +5,7 @@ import UniversitiesContainer from '../components/UniversitiesContainer'
 import Pagination from '../components/Pagination'
 import OtherPagesLinkContainer from '../components/OtherPagesLinkContainer'
 import Animate, { FadeInUp } from 'animate-css-styled-components'
+import localUniversityData from '../data/universityData.json'
 
 
 const EducationPage = () => {
@@ -22,7 +23,7 @@ const EducationPage = () => {
           setUniversities(data)
           setLoading(false)
         })
-        .catch(error => console.log(error))
+        .catch(setUniversities(localUniversityData))
     }
 
     fetchData()
