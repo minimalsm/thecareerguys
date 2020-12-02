@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { FadeIn } from 'animate-css-styled-components';
+import { FadeIn } from 'animate-css-styled-components'
 
 const StyledFadeIn = styled(FadeIn)`
   display: flex;

@@ -19,19 +19,19 @@ const location = {
   lng: -4.250556,
 }
 
-const zoomLevel = 16;
+const zoomLevel = 16
 
 const GoogleMap = () => (
   <MapDiv className="map">
 
-      <GoogleMapReact
-        // bootstrapURLKeys={{ key: '' }}
-        defaultCenter={location}
-        defaultZoom={zoomLevel}
-        pin
-      />
+    <GoogleMapReact
+      // bootstrapURLKeys={{ key: '' }}
+      defaultCenter={location}
+      defaultZoom={zoomLevel}
+      pin
+    />
 
   </MapDiv>
 )
 
-export default GoogleMap;
+export default GoogleMap

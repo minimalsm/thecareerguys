@@ -1,43 +1,43 @@
-import React, { useState, useEffect } from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import UniversitiesContainer from "../components/UniversitiesContainer";
-import Pagination from "../components/Pagination";
-import OtherPagesLinkContainer from "../components/OtherPagesLinkContainer";
-import Animate, { FadeInUp } from 'animate-css-styled-components';
+import React, { useState, useEffect } from 'react'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import UniversitiesContainer from '../components/UniversitiesContainer'
+import Pagination from '../components/Pagination'
+import OtherPagesLinkContainer from '../components/OtherPagesLinkContainer'
+import Animate, { FadeInUp } from 'animate-css-styled-components'
 
 
 const EducationPage = () => {
-  const [ universities, setUniversities ] = useState([]);
-  const [ loading, setLoading ] = useState(false);
-  const [ currentPage, setCurrentPage ] = useState(1);
-  const [ itemsPerPage ] = useState(25);
+  const [ universities, setUniversities ] = useState([])
+  const [ loading, setLoading ] = useState(false)
+  const [ currentPage, setCurrentPage ] = useState(1)
+  const [ itemsPerPage ] = useState(25)
 
-   useEffect(() => {
+  useEffect(() => {
     async function fetchData() {
       setLoading(true)
-      fetch(`https://universities.hipolabs.com/search?country=United%20Kingdom`)
+      fetch('https://universities.hipolabs.com/search?country=United%20Kingdom')
         .then(response => response.json())
         .then(data => {
-          setUniversities(data);
-          setLoading(false);
+          setUniversities(data)
+          setLoading(false)
         })
-        .catch(error => console.log(error));
+        .catch(error => console.log(error))
     }
 
-    fetchData();
-    console.log(universities);
-   }, [])
+    fetchData()
+    console.log(universities)
+  }, [])
 
 
-   // Pagination //
-   // Get current universities
-   const indexOfLastItem = currentPage * itemsPerPage;
-   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-   const currentItems = universities.slice(indexOfFirstItem, indexOfLastItem);
+  // Pagination //
+  // Get current universities
+  const indexOfLastItem = currentPage * itemsPerPage
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage
+  const currentItems = universities.slice(indexOfFirstItem, indexOfLastItem)
 
-   //Change page
-   const paginate = (pageNumber) => setCurrentPage(pageNumber)
+  //Change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber)
    
   
   return (

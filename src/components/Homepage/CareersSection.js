@@ -19,4 +19,4 @@ const EducationSection = () => {
   )
 }
 
-export default EducationSection;
+export default EducationSection

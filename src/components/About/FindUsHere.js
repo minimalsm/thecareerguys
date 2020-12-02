@@ -51,4 +51,4 @@ const FindUsHere = () => {
   )
 }
 
-export default FindUsHere;
+export default FindUsHere

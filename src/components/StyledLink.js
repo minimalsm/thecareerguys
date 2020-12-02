@@ -36,4 +36,4 @@ const StyledLink = (props) => {
   )
 }
 
-export default StyledLink;
+export default StyledLink

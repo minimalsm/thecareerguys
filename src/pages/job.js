@@ -1,35 +1,33 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
 import Layout from '../components/layout'
-import * as queryString from "query-string";
-import PaySection from '../components/Job/PaySection';
+import * as queryString from 'query-string'
+import PaySection from '../components/Job/PaySection'
 
 
 const JobPage = ({ location }) => {
-  const ukAverageSalary = 25000
-  const { soc } = queryString.parse(location.search);
-  const [ jobData, setJobData ] = useState({});
-  const [ scotlandSalary, setScotlandSalary ] = useState([]);
+  const { soc } = queryString.parse(location.search)
+  const [ jobData, setJobData ] = useState({})
+  const [ scotlandSalary, setScotlandSalary ] = useState([])
 
   const getMostRecentSalary = (data) => {
-    const payDataByYear = data.series.sort((a, b) => b.year - a.year);
-    const mostRecentWeeklyWage = payDataByYear[0].estpay;
-    const mostRecentSalary = mostRecentWeeklyWage * 52;
-    return mostRecentSalary;
+    const payDataByYear = data.series.sort((a, b) => b.year - a.year)
+    const mostRecentWeeklyWage = payDataByYear[0].estpay
+    const mostRecentSalary = mostRecentWeeklyWage * 52
+    return mostRecentSalary
   }
 
   useEffect(() => {
     fetch(`https://api.lmiforall.org.uk/api/v1/soc/code/${soc}`)
-    .then(response => response.json())
-    .then(data => setJobData(data))
-    .catch(error => console.log(error))
+      .then(response => response.json())
+      .then(data => setJobData(data))
+      .catch(error => console.log(error))
   }, [])
 
   useEffect(() => {
     fetch(`https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A11`)
-    .then(response => response.json()) 
-    .then(data => setScotlandSalary(getMostRecentSalary(data)))
-    .catch(error => console.log(error))
+      .then(response => response.json()) 
+      .then(data => setScotlandSalary(getMostRecentSalary(data)))
+      .catch(error => console.log(error))
   }, [])
   
   return (
@@ -53,4 +51,4 @@ const JobPage = ({ location }) => {
   )
 }
 
-export default JobPage;
+export default JobPage

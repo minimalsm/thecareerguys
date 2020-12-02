@@ -12,7 +12,7 @@ const HomeSection = () => {
   )
 }
 
-export default HomeSection;
+export default HomeSection
 
 const StyledSection = styled.section`
   margin: 0 auto;

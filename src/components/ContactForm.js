@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import React from 'react'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
@@ -59,15 +60,15 @@ const StyledContactForm = styled.div`
 `
 
 const Warning = ({ errorType }) => (
-  <span style={{ color: `red` }}>
-    <WarningIcon style={{ position: 'relative', top: `3.5` }} /> <small>Please enter a {errorType}</small>
+  <span style={{ color: 'red' }}>
+    <WarningIcon style={{ position: 'relative', top: '3.5' }} /> <small>Please enter a {errorType}</small>
   </span>
 )
 
 const ContactForm = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm()
   const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => console.log(data)
 
   return (
     <StyledContactForm>
@@ -75,16 +76,16 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="name">Name</label>
         <input id="name" name="name" type="text" ref={register({ required: true, minLength: 2})}></input>
-        {errors.name && <Warning class="error" errorType={"valid name"} />}
+        {errors.name && <Warning class="error" errorType={'valid name'} />}
 
         <label htmlFor="email">Email</label>
         <input id="email" name="email" type="email" ref={register({ required: true, pattern: EMAIL_REGEX })}></input>
-        {errors.email && <Warning class="error" errorType={"valid email"} />}
+        {errors.email && <Warning class="error" errorType={'valid email'} />}
 
 
         <label htmlFor="message">Message</label>
         <textarea id="message" name="message" ref={register({ required: true })}></textarea>
-        {errors.message && <Warning class="error" errorType={"message"} />}
+        {errors.message && <Warning class="error" errorType={'message'} />}
 
         <button type="submit">Send Message</button>
       </form>

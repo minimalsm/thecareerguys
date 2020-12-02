@@ -38,7 +38,7 @@ const StyledList = styled.ul`
 
 const University = ({ universities, loading }) => {
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <h2>Loading...</h2>
   }
   
   
@@ -49,9 +49,9 @@ const University = ({ universities, loading }) => {
           <a href={university.web_pages[0]}>{university.name}</a>
         </li>
         
-        ))}
+      ))}
     </StyledList>
   )
 }
 
-export default University;
+export default University

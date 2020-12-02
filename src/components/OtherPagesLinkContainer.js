@@ -27,4 +27,4 @@ const OtherPagesLinkContainer = ({ firstName, firstLink, secondName, secondLink 
   )
 }
 
-export default OtherPagesLinkContainer;
+export default OtherPagesLinkContainer

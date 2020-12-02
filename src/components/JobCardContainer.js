@@ -18,8 +18,8 @@ export default function JobCardContainer() {
   const [ showAll, setShowAll ] = useState(false)
   
   const handleClick = (e) => {
-    e.preventDefault();
-    setShowAll(true);
+    e.preventDefault()
+    setShowAll(true)
   }
 
   return (
@@ -40,9 +40,9 @@ export default function JobCardContainer() {
             <JobCard class='jobcard' title={'Dental practitioners'} soc={2215} salary={0} />
           </>) 
         : 
-          <>
-            <MoreButton name="Show more" onClick={handleClick}></MoreButton> 
-          </>
+        <>
+          <MoreButton name="Show more" onClick={handleClick}></MoreButton> 
+        </>
       }
     </StyledJobCardContainer>
   )

@@ -1,7 +1,7 @@
-import React from "react"
-import BarChart from "../components/BarChart"
-import Layout from "../components/layout"
-import ChartContainer from "../components/ChartContainer"
+import React from 'react'
+import BarChart from '../components/BarChart'
+import Layout from '../components/layout'
+import ChartContainer from '../components/ChartContainer'
 
 const TestPage = () => {
   

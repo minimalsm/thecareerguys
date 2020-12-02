@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react'
 import styled from 'styled-components'
 // Components
-import Layout from "../components/layout"
-import ContactForm from "../components/ContactForm"
+import Layout from '../components/layout'
+import ContactForm from '../components/ContactForm'
 // Images/animation
 import TypingMan from '../images/man-typing.svg'
-import Animate, { Bounce, Jello, RotateInDownLeft } from 'animate-css-styled-components';
+import Animate, { Bounce, Jello, RotateInDownLeft } from 'animate-css-styled-components'
 
 const FlexContainer = styled.div`
   display: flex;
@@ -27,17 +27,17 @@ const StyledAnimate = styled(Animate)`
 const StyledImg = styled.img`
   width: 100%;
   margin-right: 20px;
-`;
+`
 
 const ContactPage = () => (
   <Layout>
     <FlexContainer>
     
-    <StyledAnimate 
-    Animation={[RotateInDownLeft, Bounce, Jello]}
-    duration={["3s", "3s", "15s"]}
-    delay={["1s", "0s", "1s"]}
-    >        <StyledImg src={TypingMan} />
+      <StyledAnimate 
+        Animation={[RotateInDownLeft, Bounce, Jello]}
+        duration={['3s', '3s', '15s']}
+        delay={['1s', '0s', '1s']}
+      >        <StyledImg src={TypingMan} />
       </StyledAnimate>
 
       <ContactForm />
@@ -46,4 +46,4 @@ const ContactPage = () => (
   </Layout>
 )
 
-export default ContactPage;
+export default ContactPage

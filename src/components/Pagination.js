@@ -32,12 +32,12 @@ const StyledDiv = styled.div`
 `
 
 const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
-  const pageNumbers = [];
+  const pageNumbers = []
 
   // Gets the correct amount of page numbers based on the number of items
   // and how many items desired on each page
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
-    pageNumbers.push(i);
+    pageNumbers.push(i)
   } 
 
 
@@ -49,7 +49,7 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
             {number === currentPage 
               ? <li className="current" key={number} onClick={() => {paginate(number)}}>{number}</li>
               : <li key={number} onClick={() => {paginate(number)}}>{number}</li>
-          }
+            }
           </>
         ))}
       </ul>

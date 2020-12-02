@@ -5,14 +5,14 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 // import { useStaticQuery, graphql } from "gatsby"
 
-import "normalize.css"
-import "./layout.css"
-import "../styles/global.css"
-import Nav from "./Nav"
+import 'normalize.css'
+import './layout.css'
+import '../styles/global.css'
+import Nav from './Nav'
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -31,9 +31,9 @@ const Layout = ({ children }) => {
       <Nav />
       <div
         style={{
-          margin: `0 auto`,
+          margin: '0 auto',
           maxWidth: 1024,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: '0 1.0875rem 1.45rem',
         }}
       >
         <main>{children}</main>

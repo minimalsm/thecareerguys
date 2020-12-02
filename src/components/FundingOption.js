@@ -45,4 +45,4 @@ const FundingOption = ({ name, content, link, image }) => {
   )
 }
 
-export default FundingOption;
+export default FundingOption
