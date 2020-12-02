@@ -16,7 +16,7 @@ const EducationPage = () => {
   useEffect(() => {
     async function fetchData() {
       setLoading(true)
-      fetch('https://universities.hipolabs.com/search?country=United%20Kingdom')
+      fetch('http://universities.hipolabs.com/search?country=United%20Kingdom')
         .then(response => response.json())
         .then(data => {
           setUniversities(data)
