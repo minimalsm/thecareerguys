@@ -82,7 +82,7 @@ const ContactForm = () => {
         {errors.email && <Warning class="error" errorType={"valid email"} />}
 
 
-        <label htmlfor="message">Message</label>
+        <label htmlFor="message">Message</label>
         <textarea id="message" name="message" ref={register({ required: true })}></textarea>
         {errors.message && <Warning class="error" errorType={"message"} />}
 

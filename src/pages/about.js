@@ -64,7 +64,7 @@ const SetImg = styled(Img)`
 const AboutPage = ({ data }) => (
   <Layout>
   <FlexTest>
-  <div class='flexWrapperLeft'>
+  <div className='flexWrapperLeft'>
     <SEO title="About Us" />
     <h1>Who We Are</h1>
     <p>Nostrud irure sunt do Lorem aliqua elit ut labore dolore velit esse cupidatat. Ex sit eiusmod tempor non eu tempor veniam occaecat laboris quis ut mollit magna ex. Reprehenderit ad consectetur anim id deserunt dolore ipsum aliquip amet. Eiusmod mollit incididunt ullamco nostrud. Dolore do tempor veniam voluptate esse nisi esse sit consectetur officia nostrud consectetur enim in. Non fugiat incididunt voluptate qui id ex nostrud est aliqua reprehenderit laboris ullamco. Veniam occaecat ipsum ad ea in laboris nulla incididunt velit nisi quis ullamco proident labore.</p>
@@ -72,7 +72,7 @@ const AboutPage = ({ data }) => (
 
     <StyledFlexContainer>
       <SetImg fluid={data.joshuaGatsbyImage.childImageSharp.fluid} />
-      <div class='bio'>
+      <div className='bio'>
         <h4>Joshua Douglas - <span>CEO</span></h4>
         <p>Nostrud irure sunt do Lorem aliqua elit ut labore dolore velit esse cupidatat. Ex sit eiusmod tempor non eu tempor veniam occaecat laboris quis ut mollit magna ex.</p>
       </div>
@@ -80,7 +80,7 @@ const AboutPage = ({ data }) => (
   
     <StyledFlexContainer>
       <SetImg fluid={data.dieterGatsbyImage.childImageSharp.fluid} />
-      <div class='bio'>
+      <div className='bio'>
         <h4>Dieter Rams - <span>Product Designer</span></h4>
         <p>Nostrud irure sunt do Lorem aliqua elit ut labore dolore velit esse cupidatat. Ex sit eiusmod tempor non eu tempor veniam occaecat laboris quis ut mollit magna ex.</p>
       </div>
@@ -89,7 +89,7 @@ const AboutPage = ({ data }) => (
 
     <StyledFlexContainer>
       <SetImg fluid={data.sennaGatsbyImage.childImageSharp.fluid} />
-      <div class='bio'>
+      <div className='bio'>
         <h4>Senna - <span>Office Dog</span></h4>
         <p>Nostrud irure sunt do Lorem aliqua elit ut labore dolore velit esse cupidatat. Ex sit eiusmod tempor non eu tempor veniam occaecat laboris quis ut mollit magna ex.</p>
       </div>

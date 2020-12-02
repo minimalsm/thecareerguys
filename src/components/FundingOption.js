@@ -36,7 +36,7 @@ const FundingOption = ({ name, content, link, image }) => {
   return (
     <StyledDiv>
       <SetImg fluid={image} />
-      <div class='content'>
+      <div className='content'>
         <h2>{name}</h2>
         <p>{content}</p>
         <a href={link}>{link}</a>

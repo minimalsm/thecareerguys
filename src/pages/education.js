@@ -11,12 +11,12 @@ const EducationPage = () => {
   const [ universities, setUniversities ] = useState([]);
   const [ loading, setLoading ] = useState(false);
   const [ currentPage, setCurrentPage ] = useState(1);
-  const [ itemsPerPage, setItemsPerPage ] = useState(25);
+  const [ itemsPerPage ] = useState(25);
 
    useEffect(() => {
     async function fetchData() {
       setLoading(true)
-      fetch(`http://universities.hipolabs.com/search?country=United%20Kingdom`)
+      fetch(`https://universities.hipolabs.com/search?country=United%20Kingdom`)
         .then(response => response.json())
         .then(data => {
           setUniversities(data);

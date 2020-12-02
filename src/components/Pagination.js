@@ -47,7 +47,7 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
         {pageNumbers.map((number) => (
           <>
             {number === currentPage 
-              ? <li class="current" key={number} onClick={() => {paginate(number)}}>{number}</li>
+              ? <li className="current" key={number} onClick={() => {paginate(number)}}>{number}</li>
               : <li key={number} onClick={() => {paginate(number)}}>{number}</li>
           }
           </>
