@@ -5,16 +5,18 @@ import CareersSection from '../components/Homepage/CareersSection'
 import EducationSection from '../components/Homepage/EducationSection'
 import FundingSection from '../components/Homepage/FundingSection'
 import SectionWrapper from "../components/SectionWrapper"
+import Layout from "../components/layout"
 
 const IndexPage = () => (
   <>
-    <Nav />
+  <Layout>
     <HomeSection />   
     <SectionWrapper bgColour={'#BDBDBD'}>
       <CareersSection />
     </SectionWrapper>
     <EducationSection />
     <FundingSection />
+    </Layout>
   </>
 )
 
