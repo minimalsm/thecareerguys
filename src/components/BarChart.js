@@ -24,17 +24,16 @@ const BarChart = ({name, salary}) => {
    <div>
       <HorizontalBar
       data={{
-        labels: ['Scotland Average', name ],
+        labels: ['Scottish Average', `${name} in Scotland` ],
         datasets: [
           {
             label: 'Salary',
             backgroundColor: [
-              '#e8c3b9',
+              '#7347CC',
               '#3e95cd',
             ],
             hoverBackgroundColor: [
-            '#F5CEC4',
-            '#419FD9',
+        
             ],
             data: [31356, salary, 0]
           }
@@ -43,7 +42,7 @@ const BarChart = ({name, salary}) => {
       options={{
         title:{
           display:true,
-          text:`Average Salary for ${name}`,
+          text:`Salary: Average ${name} vs Scottish Average`,
           fontSize:15
         },
         legend:{

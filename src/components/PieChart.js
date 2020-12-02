@@ -1,47 +1,41 @@
 import React, { useState, useEffect } from 'react'
 import { Pie } from 'react-chartjs-2'
 
-export default function PieChart() {
-  const [ walesPayData, setWalesPayData] = useState(0);
-
-  const [ scotlandPayData, setScotlandPayData] = useState(0);
-
-  const [ northernIrelandPayData, setNorthernIrelandPayData] = useState(0);
+export default function PieChart({ name, soc, scotlandSalary }) {
+  const [ walesSalary, setWalesSalary] = useState(0);
+  const [ northernIrelandSalary, setNorthernIrelandSalary] = useState(0);
+  const [ errorOnPayFetch, setErrorOnPayFetch ] = useState(false);
 
 
-  const soc = 2136;
+  const getMostRecentSalary = (data) => {
+    const payDataByYear = data.series.sort((a, b) => b.year - a.year);
+    const mostRecentWeeklyWage = payDataByYear[0].estpay;
+    const mostRecentSalary = mostRecentWeeklyWage * 52;
+    return mostRecentSalary;
+  }
 
   useEffect(() => {
-    fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=2136&filters=region%3A10`)
+    fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A10`)
     .then(response => response.json()) 
-    .then(data => {
-      const paySortedByYear = data.series.sort((a, b) => b.year - a.year);
-      setWalesPayData(paySortedByYear[0].estpay) //Most recent year's salary
-    })
+    .then(data => setWalesSalary(getMostRecentSalary(data)))
+    .catch(error => setErrorOnPayFetch(true))
   },[])
+
+  useEffect(() => {
+    fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A12`)
+    .then(response => response.json())
+    .then(data => setNorthernIrelandSalary(getMostRecentSalary(data)))
+    .catch(error => setErrorOnPayFetch(true))
+  },[])
+
+  console.log('s ', scotlandSalary);
+  console.log('ni: ', northernIrelandSalary);
+  console.log('w: ', walesSalary)
+
+
+  //Return null if the data isn't sufficient to properly render a Pie chart
+  if (errorOnPayFetch) return null
   
-  useEffect(() => {
-    fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=2136&filters=region%3A11`)
-    .then(response => response.json()) 
-    .then(data => {
-      const paySortedByYear = data.series.sort((a, b) => b.year - a.year);
-      setScotlandPayData(paySortedByYear[0].estpay) //Most recent year's salary
-    })
-  },[])
-
-  useEffect(() => {
-    fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=2136&filters=region%3A12`)
-    .then(response => response.json()) 
-    .then(data => {
-      const paySortedByYear = data.series.sort((a, b) => b.year - a.year);
-      setNorthernIrelandPayData(paySortedByYear[0].estpay) //Most recent year's salary
-    })
-  },[])
-
-  console.log('s ', scotlandPayData * 52);
-  console.log('ni: ', northernIrelandPayData * 52);
-  console.log('w: ', walesPayData * 52)
-
   return (
    <div>
       <Pie
@@ -51,26 +45,26 @@ export default function PieChart() {
           {
             label: 'Salary',
             backgroundColor: [
-              '#e8c3b9',
+              '#37997E',
               '#3e95cd',
+              '#E6933B'
             ],
             hoverBackgroundColor: [
-            '#F5CEC4',
-            '#419FD9',
+         
             ],
-            data: [(walesPayData * 52), (scotlandPayData * 52), (northernIrelandPayData * 52)]
+            data: [(walesSalary), (scotlandSalary), (northernIrelandSalary)]
           }
         ]
       }}
       options={{
         title:{
           display:true,
-          text:'Regional Pay Differences',
+          text:`Regional Pay Differences for ${name}`,
           fontSize:15
         },
         legend:{
-          display:false,
-          position:'right'
+          display:true,
+          position:'bottom'
         }
       }}
     />
