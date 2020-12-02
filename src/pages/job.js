@@ -22,13 +22,14 @@ const JobPage = ({ location }) => {
     fetch(`http://api.lmiforall.org.uk/api/v1/soc/code/${soc}`)
     .then(response => response.json())
     .then(data => setJobData(data))
+    .catch(error => console.log(error))
   }, [])
 
   useEffect(() => {
     fetch(`http://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A11`)
     .then(response => response.json()) 
     .then(data => setScotlandSalary(getMostRecentSalary(data)))
-    .catch(error => console.log('We are unable to find any salary data for this job.'))
+    .catch(error => console.log(error))
   },[])
   
   return (

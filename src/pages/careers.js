@@ -26,14 +26,14 @@ const CareersPage = () => {
     fetchData()
   }
 
-   // Client-side Runtime Data Fetching
    async function fetchData() {
-     // get data from GitHub api
      fetch(`http://api.lmiforall.org.uk/api/v1/soc/search?q=${searchTerm}`)
-       .then(response => response.json()) // parse JSON from request
+       .then(response => response.json())
        .then(resultData => {
          setResults(resultData)
-       }) // set data for the number of stars
+       })
+       .catch(error => console.log(error));
+
    }
 
    const resultsFiltered = results.filter((result, idx) => idx < 10)

@@ -15,14 +15,14 @@ const EducationPage = () => {
 
    useEffect(() => {
     async function fetchData() {
-      // get data from GitHub api
       setLoading(true)
       fetch(`http://universities.hipolabs.com/search?country=United%20Kingdom`)
-        .then(response => response.json()) // parse JSON from request
+        .then(response => response.json())
         .then(data => {
           setUniversities(data);
           setLoading(false);
-        }) // set data for the number of stars
+        })
+        .catch(error => console.log(error));
     }
 
     fetchData();
