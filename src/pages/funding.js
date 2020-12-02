@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FundingOption from '../components/FundingOption'
 import { graphql } from 'gatsby'
-import Image from 'gatsby-image'
 import OtherPagesLinkContainer from "../components/OtherPagesLinkContainer"
 
 const FundingPage = ({ data }) => (

@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
 import { AiOutlineWarning as WarningIcon } from 'react-icons/ai'
-import MoreButton from './MoreButton'
 
 const StyledContactForm = styled.div`
   flex: 1 1 50%;
@@ -74,17 +73,17 @@ const ContactForm = () => {
     <StyledContactForm>
       <h1>Contact Us</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>Name</label>
-        <input name="name" type="text" ref={register({ required: true, minLength: 2})}></input>
+        <label htmlFor="name">Name</label>
+        <input id="name" name="name" type="text" ref={register({ required: true, minLength: 2})}></input>
         {errors.name && <Warning class="error" errorType={"valid name"} />}
 
-        <label>Email</label>
-        <input name="email" type="email" ref={register({ required: true, pattern: EMAIL_REGEX })}></input>
+        <label htmlFor="email">Email</label>
+        <input id="email" name="email" type="email" ref={register({ required: true, pattern: EMAIL_REGEX })}></input>
         {errors.email && <Warning class="error" errorType={"valid email"} />}
 
 
-        <label>Message</label>
-        <textarea name="message" ref={register({ required: true })}></textarea>
+        <label htmlfor="message">Message</label>
+        <textarea id="message" name="message" ref={register({ required: true })}></textarea>
         {errors.message && <Warning class="error" errorType={"message"} />}
 
         <button type="submit">Send Message</button>

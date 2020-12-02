@@ -30,7 +30,7 @@ const JobPage = ({ location }) => {
     .then(response => response.json()) 
     .then(data => setScotlandSalary(getMostRecentSalary(data)))
     .catch(error => console.log(error))
-  },[])
+  }, [])
   
   return (
     <Layout>
@@ -54,15 +54,3 @@ const JobPage = ({ location }) => {
 }
 
 export default JobPage;
-
-const FlexContainer = styled.div`
-display: flex; 
-flex-direction: column; 
-flex-wrap: wrap;
-justify-content: center;
-
-  .chart {
-    flex: 1;
-    max-width: 100%;
-  }
-`

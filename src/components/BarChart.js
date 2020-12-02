@@ -1,24 +1,6 @@
 import React from 'react'
 import { HorizontalBar } from 'react-chartjs-2'
 
-const state = {
-  labels: ['UK Average', 'This Job' ],
-  datasets: [
-    {
-      label: 'Salary',
-      backgroundColor: [
-        '#e8c3b9',
-        '#3e95cd',
-      ],
-      hoverBackgroundColor: [
-      '#F5CEC4',
-      '#419FD9',
-      ],
-      data: [25000, 50000, 0]
-    }
-  ]
-}
-
 const BarChart = ({name, salary}) => {
   return (
    <div>

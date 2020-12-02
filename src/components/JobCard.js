@@ -58,8 +58,8 @@ const JobCard = ({ soc, title }) => {
   return (
     <StyledFadeIn duration="0.8s" delay="0s">
       <StyledJobCard>
-        <p class="title">{title}</p>
-        <p class="salary">Average UK Salary: £45,000</p>
+        <p className="title">{title}</p>
+        <p className="salary">Average UK Salary: £45,000</p>
         <Link to={`/job?soc=${soc}`}>Learn More</Link>
       </StyledJobCard>
     </StyledFadeIn>

@@ -88,10 +88,10 @@ const StyledNav = styled.nav`
 const Nav = () => {
   return (
     <StyledNav>
-      <div class='logo-wrapper'>
-        <h2 class='logo'><Link to='/'>TheCareerGuys</Link></h2>
+      <div className='logo-wrapper'>
+        <h2 className='logo'><Link to='/'>TheCareerGuys</Link></h2>
       </div>
-      <div class="nav-wrapper">
+      <div className="nav-wrapper">
         <ul>
           <Link to='/careers'>Careers</Link>
           <Link to='/education'>Education</Link>
