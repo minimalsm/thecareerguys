@@ -24,9 +24,9 @@ export default function JobCardContainer() {
 
   return (
     <StyledJobCardContainer>
-      <JobCard class='jobcard' title={'Design and development engineers'} soc={2126} salary={0} />
       <JobCard class='jobcard' title={'Architects'} soc={2431} salary={0} />
       <JobCard class='jobcard' title={'Graphic designers'} soc={3421} salary={0} />
+      <JobCard class='jobcard' title={'Design and development engineers'} soc={2126} salary={0} />
       <JobCard class='jobcard' title={'Dancers and choreographers'} soc={3414} salary={0} />
 
 

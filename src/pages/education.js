@@ -23,7 +23,10 @@ const EducationPage = () => {
           setUniversities(data)
           setLoading(false)
         })
-        .catch(setUniversities(localUniversityData))
+        .catch(() => {
+          setUniversities(localUniversityData)
+          setLoading(false)
+        })
     }
 
     fetchData()
