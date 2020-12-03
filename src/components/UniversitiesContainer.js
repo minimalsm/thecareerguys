@@ -27,8 +27,10 @@ const StyledList = styled.ul`
     border: none;
   }
 
+
+/* In smaller screen sizes allow list width to shrink according to screen size */
 @media screen and (max-width: 500px) {
-      li a {
+      li {
         width: auto;
       }
   }

@@ -80,6 +80,16 @@ const StyledNav = styled.nav`
     
     a {
     }
+
+    font-size: 15px;
+  }
+
+  /* For xxxs small screens (like Galaxy Fold) */
+  @media only screen and (max-width: 350px) {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
 `

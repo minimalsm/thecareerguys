@@ -16,6 +16,7 @@ const SetImg = styled(Image)`
 const StyledDiv = styled.div`
   display: flex;
   padding-bottom: 50px;
+  max-width: 100%;
 
   /* Overides default margins (26px) as it was asthethically clunky on the Funding page */
   h2 {
@@ -23,12 +24,33 @@ const StyledDiv = styled.div`
   }
   p {
     margin-bottom: 10px;
+    max-width: 100%;
+    flex: 1;
+  }
+
+  a {
+    display: inline-block;
+    max-width: 80%
   }
 
 
   /* Content will try to take up 80% of screen size minimum and will grow/shrink accordingly */
   .content {
     flex: 1 1 80%;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+      .content {
+        flex-basis: auto;
+        
+      }
+  }
+
+  @media screen and (max-width: 400px) {
+      p {
+        font-size: 15px;
+      }
   }
 `
 
