@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { AiOutlineToTop as TopIcon } from 'react-icons/ai'
+import { Link } from 'gatsby'
 
 const StyledFooter = styled.footer`
   border-top: 1px solid #bdbdbd;
@@ -71,7 +72,7 @@ const StyledFooter = styled.footer`
     }
   }
 
-  .top {
+  .links {
     display: flex;
     
     i {
@@ -83,15 +84,34 @@ const StyledFooter = styled.footer`
     h2 {
     }
 
+    
+  }
+
+  .top {
+    display: flex;
+
     :hover {
-      h2, a, i {
+      h2, a {
         color: #448aff;
       }
     }
   }
 
-  @media screen and (max-width: 500px) {
+  .home {
+    display: none;
+    margin-right: 40px;
+    
+    a:hover {
+        color: #448aff;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
       flex-direction: column-reverse;
+
+      .home {
+        display: block;
+      }
   }
 `
 
@@ -115,9 +135,14 @@ const Footer = () => {
         <p><a className='contact-item' href="mailto:hello@thecareerguys.com">hello@thecareerguys.com</a></p>
       </div>
 
-      <div className='top'>
-        <a href="#top"><i><TopIcon /></i></a>
-        <a href="#top"><h2>Top</h2></a>
+      <div className='links'>
+        <div className='home'>
+          <h2><Link to='/'>Home</Link></h2>
+        </div>
+        <div className='top'>
+          <a href="#top"><i><TopIcon /></i></a>
+          <a href="#top"><h2>Top</h2></a>
+        </div>
       </div>
     </StyledFooter>
   )
