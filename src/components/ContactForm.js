@@ -17,7 +17,7 @@ const StyledContactForm = styled.div`
   }
 
   label {
-    margin-top: 15px;
+    margin-top: 13px;
   }
 
   textarea {
@@ -56,7 +56,6 @@ const StyledContactForm = styled.div`
       background-color: #0A5FCF;
     }
   }  
-
 `
 
 const Warning = ({ errorType }) => (

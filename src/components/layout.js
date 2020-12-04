@@ -13,6 +13,7 @@ import 'normalize.css'
 import './layout.css'
 import '../styles/global.css'
 import Nav from './Nav'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -38,6 +39,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
+      <Footer />
     </>
   )
 }

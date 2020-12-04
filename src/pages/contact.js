@@ -11,6 +11,11 @@ const FlexContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex: 1 1 auto;
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: 20px;
+  }
 `
 
 const StyledAnimate = styled(Animate)`

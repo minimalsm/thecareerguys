@@ -39,7 +39,6 @@ const EducationPage = () => {
   const indexOfLastItem = currentPage * itemsPerPage
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
   const currentItems = universities.slice(indexOfFirstItem, indexOfLastItem)
-
   //Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
    

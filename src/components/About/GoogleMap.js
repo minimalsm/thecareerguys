@@ -5,6 +5,11 @@ import styled from 'styled-components'
 const MapDiv = styled.div`
   width: 350px;
   height: 350px;
+
+  @media screen and (max-width: 400px) {
+      height: 200px;
+      width: 200px;
+  }
 `
 
 // <LocationPin

@@ -97,7 +97,7 @@ const StyledNav = styled.nav`
 
 const Nav = () => {
   return (
-    <StyledNav>
+    <StyledNav className='top'>
       <div className='logo-wrapper'>
         <h2 className='logo'><Link to='/'>TheCareerGuys</Link></h2>
       </div>
