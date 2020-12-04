@@ -69,14 +69,20 @@ const getMostRecentSalary = (data) => {
   return mostRecentSalary
 }
 
-const JobCard = ({ soc, title }) => {
+const JobCard = ({ soc, title, salary }) => {
   const [ jobSalary, setJobSalary ] = useState(0)
 
+  // Only run a fetch request if the salary hasn't been passed to 
+  // the JobCard as props - (saving fetch requests for salary on placeholder jobcards)
   useEffect(() => {
-    fetch(`https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A11`)
-      .then(response => response.json()) 
-      .then(data => setJobSalary(getMostRecentSalary(data)))
-      .catch((error) => console.log(error))
+    if (!salary) {
+      fetch(`https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A11`)
+        .then(response => response.json()) 
+        .then(data => setJobSalary(getMostRecentSalary(data)))
+        .catch((error) => console.log(error))
+    } else {
+      setJobSalary(salary)
+    }
   }, [])
 
 
@@ -86,7 +92,7 @@ const JobCard = ({ soc, title }) => {
         <h3 className="title">{title}</h3>
         { jobSalary === 0 ?
           <p>No salary information available</p> :
-          <p className="salary">Average UK Salary: £{jobSalary}</p>
+          <p className="salary">Average UK Salary: £{salary || jobSalary}</p>
         }
         <Link to={`/job?soc=${soc}`}>Learn More</Link>
       </StyledJobCard>

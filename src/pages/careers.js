@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import JobCard from '../components/JobCard'
 import Search from '../components/Search'
+import PlaceholderJobs from '../components/Careers/PlaceholderJobs'
 
 const CareersPage = () => {
   const [ searchTerm, setSearchTerm ] = useState('')
@@ -44,7 +45,7 @@ const CareersPage = () => {
             )
           })
         )
-        : <p></p>
+        : <PlaceholderJobs />
       }
     </Layout>
   )
