@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 // Components
 import Layout from '../components/layout'
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/Contact/ContactForm'
 // Images/animation
 import TypingMan from '../images/man-typing.svg'
 import Animate, { Bounce, Jello, RotateInDownLeft } from 'animate-css-styled-components'

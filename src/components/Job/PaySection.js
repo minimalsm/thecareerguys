@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import BarChart from '../BarChart'
-import PieChart from '../PieChart'
+import BarChart from '../Charts/BarChart'
+import PieChart from '../Charts/PieChart'
 
 const FlexContainer = styled.div`
 display: flex; 

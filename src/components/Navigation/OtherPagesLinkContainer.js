@@ -7,10 +7,8 @@ const StyledDiv = styled.div`
   align-items: center;
   justify-content: center;
   
-
   a {
     margin: 8px 5px;
-
   }
 
   @media screen and (max-width: 750px) {

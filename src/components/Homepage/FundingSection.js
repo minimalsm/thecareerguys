@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import StyledLink from '../StyledLink'
+import StyledLink from '../Navigation/StyledLink'
 
 const StyledSection = styled.section`
   margin: 0 auto;

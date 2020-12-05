@@ -1,6 +1,6 @@
 import React from 'react'
-import FundingOption from '../FundingOption'
-import OtherPagesLinkContainer from '../OtherPagesLinkContainer'
+import FundingOption from './FundingOption'
+import OtherPagesLinkContainer from '../Navigation/OtherPagesLinkContainer'
 import styled from 'styled-components'
 
 const FundingSection = ({ data }) => {

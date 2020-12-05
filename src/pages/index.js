@@ -3,7 +3,7 @@ import HomeSection from '../components/Homepage/HomeSection'
 import CareersSection from '../components/Homepage/CareersSection'
 import EducationSection from '../components/Homepage/EducationSection'
 import FundingSection from '../components/Homepage/FundingSection'
-import SectionWrapper from '../components/SectionWrapper'
+import SectionWrapper from '../components/Homepage/SectionWrapper'
 import Layout from '../components/layout'
 
 const IndexPage = () => (

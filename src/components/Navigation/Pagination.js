@@ -40,7 +40,6 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
     pageNumbers.push(i)
   } 
 
-
   return (
     <StyledDiv>
       <ul>
