@@ -82,7 +82,7 @@ const ContactForm = () => {
     })
       .then(() => {
         e.target.reset()
-        navigate('/', { replace: true })
+        navigate('/submitted', { replace: true })
       })
       .catch((error) => console.error(error))
   }
