@@ -3,10 +3,17 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const StyledNav = styled.nav`
+  /* z-index: 999;
+  top: 0;
+  overflow: hidden;
+  background-color: #fff;
+  position: fixed;
+  width: 100%; */
+
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+  padding-top: 5px;
   margin-bottom: 20px;
   padding-bottom: 2px;
   flex: 1;

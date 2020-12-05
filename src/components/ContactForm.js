@@ -1,8 +1,10 @@
 /* eslint-disable no-useless-escape */
-import React from 'react'
+import React, { useState } from 'react'
+import { navigate } from 'gatsby'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
 import { AiOutlineWarning as WarningIcon } from 'react-icons/ai'
+import axios from 'axios'
 
 const StyledContactForm = styled.div`
   flex: 1 1 50%;
@@ -65,14 +67,30 @@ const Warning = ({ errorType }) => (
 )
 
 const ContactForm = () => {
+  const { messageSent, setMessageSent } = useState(false)
   const { register, handleSubmit, errors } = useForm()
   const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  const onSubmit = data => console.log(data)
-
+  
+  const onSubmit = (data, e) => {
+    console.log(data)
+    
+    axios({
+      method: 'post',
+      url: '../api/insertMessage.php',
+      headers: { 'content-type': 'application/json' },
+      data: data
+    })
+      .then(() => {
+        e.target.reset()
+        navigate('/', { replace: true })
+      })
+      .catch((error) => console.error(error))
+  }
+  
   return (
     <StyledContactForm>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <h1>Contact Us</h1>   
+      <form onSubmit={handleSubmit(onSubmit)} action="/">
         <label htmlFor="name">Name</label>
         <input id="name" name="name" type="text" ref={register({ required: true, minLength: 2})}></input>
         {errors.name && <Warning class="error" errorType={'valid name'} />}
