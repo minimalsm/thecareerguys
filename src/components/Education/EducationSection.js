@@ -6,7 +6,6 @@ import styled from 'styled-components'
 import Animate, { FadeInUp } from 'animate-css-styled-components'
 import localUniversityData from '../../data/universityData.json'
 
-
 const EducationSection = () => {
   const [ universities, setUniversities ] = useState([])
   const [ loading, setLoading ] = useState(false)

@@ -35,7 +35,7 @@ export const CareersSection = () => {
 
   return (
     <StyledDiv>
-      <h1>Popular Careers</h1>
+      <h1>Explore Careers</h1>
       <Search 
         value={searchTerm}
         onChange={handleNewSearch}
