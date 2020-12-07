@@ -5,9 +5,13 @@ import Layout from '../components/layout'
 import ContactForm from '../components/Contact/ContactForm'
 // Images/animation
 import TypingMan from '../images/man-typing.svg'
-import Animate, { Bounce, Jello, RotateInDownLeft } from 'animate-css-styled-components'
+import Animate, { Bounce, RotateInDownLeft } from 'animate-css-styled-components'
 
 const FlexContainer = styled.div`
+
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 1.0875rem 1.45rem;
   display: flex;
   justify-content: space-between;
   flex: 1 1 auto;
@@ -39,12 +43,11 @@ const ContactPage = () => (
     <FlexContainer>
     
       <StyledAnimate 
-        Animation={[RotateInDownLeft, Bounce, Jello]}
-        duration={['3s', '3s', '15s']}
-        delay={['1s', '0s', '1s']}
+        Animation={[RotateInDownLeft, Bounce]}
+        duration={['3s', '3s']}
+        delay={['1s', '0s']}
       >        <StyledImg src={TypingMan} />
       </StyledAnimate>
-
       <ContactForm />
 
     </FlexContainer>

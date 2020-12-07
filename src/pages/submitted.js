@@ -47,7 +47,6 @@ export const SubmittedPage = () => {
         <p>We endevour to get back to you as soon as possible!</p>
         <StyledLink to='/' name='Return to Homepage' />
       </StyledDiv>
-
     </Layout>
   )
 }
