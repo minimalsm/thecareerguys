@@ -7,7 +7,7 @@ const FundingSection = ({ data }) => {
   return (
     <StyledSection>
       <h1>Funding Options</h1>
-      <p>Nostrud irure sunt do Lorem aliqua elit ut labore dolore velit esse cupidatat. Ex sit eiusmod tempor non eu tempor veniam occaecat laboris quis ut mollit magna ex. Reprehenderit ad consectetur anim id deserunt dolore ipsum aliquip amet. Eiusmod mollit incididunt ullamco nostrud. Dolore do tempor veniam voluptate esse nisi esse sit consectetur officia nostrud consectetur enim in. Non fugiat incididunt voluptate qui id ex nostrud est aliqua reprehenderit laboris ullamco. Veniam occaecat ipsum ad ea in laboris nulla incididunt velit nisi quis ullamco proident labore.</p>
+      <p>Worrying about money shouldn't stop your from pursuing your dreams. TheCareerGuys staff have compiled for you a list of the best and most relevant funding resources necessary if you are considering changing your career. We do not operate for profit so all that we ask is if you find value in our service, please, share it with someone else who you think may benefit.</p>
 
       <FundingOption 
         name={'The Scholarship Hub'}

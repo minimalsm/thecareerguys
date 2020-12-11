@@ -7,8 +7,13 @@ const MapDiv = styled.div`
   height: 350px;
 
   @media screen and (max-width: 400px) {
-      height: 200px;
-      width: 200px;
+      height: 300px;
+      width: 300px;
+  }
+
+  @media screen and (max-width: 315px) {
+      height: 250px;
+      width: 250px;
   }
 `
 

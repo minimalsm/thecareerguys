@@ -15,78 +15,52 @@ const StyledFooter = styled.footer`
   background-color: #fff;
   padding-top: 30px;
   padding-bottom: 30px;
-
   a {
     text-decoration: none;
     color: #000000CC;
   }
-
   p {
     margin: 1px;
-    padding: 0;
-
-    
+    padding: 0; 
     font-size: 15px;
   }
-
-  div {
-  }
-
   .contact {
     display: flex;
     justify-content: top;
     align-items: center;
     flex-direction: column;
     margin-bottom: 15px;
-
     p {
       border-bottom: 1px solid black;
-
       :hover {
         border-color: #448aff;
       }
     }
-
     a:hover {
       color: #448aff;
     }
-
-    p {
-
-    }
   }
-
   .address {
     display: flex;
     justify-content: top;
     align-items: center;
     flex-direction: column;
-
     a {
       font-size: 15px;
       text-align: center;
-
       :hover {
         color: #448aff;
       }
     }
   }
-
   .links {
-    display: flex;
-    
+    display: flex;  
     i {
       font-size: 30px;
       position: relative;
       top: 2px;
-    }
-
-    h2 {
-    }
-
-    
+    }    
   }
-
   .top {
     display: flex;
 
@@ -96,7 +70,6 @@ const StyledFooter = styled.footer`
       }
     }
   }
-
   .home {
     display: none;
     margin-right: 40px;
@@ -105,7 +78,6 @@ const StyledFooter = styled.footer`
         color: #448aff;
     }
   }
-
   @media screen and (max-width: 650px) {
       flex-direction: column-reverse;
 
@@ -126,7 +98,7 @@ const Footer = () => {
           <br/>
           G3 8LQ
           <br/>
-          Scotlandd
+          Scotland
         </a>
       </div>
 

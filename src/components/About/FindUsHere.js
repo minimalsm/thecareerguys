@@ -30,6 +30,12 @@ const StyledDiv = styled.div`
       background-color: #0A5FCF;
     }
   }  
+
+  small {
+    font-weight: 300;
+    text-align: right;
+    color: #000000cc;
+  }
   
 `
 
@@ -42,9 +48,9 @@ const FindUsHere = () => {
         
       <GoogleMap />
 
-      <small>123 Fake St</small>
+      <small>40 St Vincent Crescent</small>
       <small>Glasgow</small>
-      <small>G12 3AB</small>
+      <small>G3 8LQ</small>
 
       <Link class='contact-link' to='/contact'>Want to Talk? Get in touch.</Link>
     </StyledDiv>

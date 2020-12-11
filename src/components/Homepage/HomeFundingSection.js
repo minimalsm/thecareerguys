@@ -13,7 +13,7 @@ const HomeFundingSection = () => {
   return (
     <StyledSection>
       <h2>Funding</h2>
-      <p>Don't let money worries be the reason you don't make the switch to a new career. Checck out our resources for all the different ways of funding your new career!</p>
+      <p>Don't let money worries be the reason you don't make the switch to a new career. Check out our resources for all the different ways of funding your new career!</p>
       <StyledLink name={'Explore Funding Options'} to={'funding'} />
     </StyledSection>
   )
