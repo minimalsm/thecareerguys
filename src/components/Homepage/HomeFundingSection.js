@@ -9,7 +9,7 @@ const StyledSection = styled.section`
   padding: 0 1.0875rem 1.45rem;
 `
 
-const EducationSection = () => {
+const HomeFundingSection = () => {
   return (
     <StyledSection>
       <h2>Funding</h2>
@@ -19,4 +19,4 @@ const EducationSection = () => {
   )
 }
 
-export default EducationSection
+export default HomeFundingSection

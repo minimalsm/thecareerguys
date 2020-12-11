@@ -7,14 +7,13 @@ import MoreButton from './MoreButton'
 const StyledJobCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-
   .jobcard {
     flex: 1 1 40%;
   }
 `
 
 
-export default function JobCardContainer() {
+const HomeJobCardContainer = () => {
   const [ showAll, setShowAll ] = useState(false)
   
   const handleClick = (e) => {
@@ -47,3 +46,5 @@ export default function JobCardContainer() {
     </StyledJobCardContainer>
   )
 }
+
+export default HomeJobCardContainer
