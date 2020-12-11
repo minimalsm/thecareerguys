@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const HomeSection = () => {
+const HomeTextSection = () => {
   return (
     <StyledSection>
       <h1>The Career Guys</h1>
@@ -13,7 +13,7 @@ const HomeSection = () => {
   )
 }
 
-export default HomeSection
+export default HomeTextSection
 
 const StyledSection = styled.section`
   margin: 0 auto;

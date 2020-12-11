@@ -1,20 +1,20 @@
 import React from 'react'
-import HomeSection from '../components/Homepage/HomeSection'
-import CareersSection from '../components/Homepage/CareersSection'
-import EducationSection from '../components/Homepage/EducationSection'
-import FundingSection from '../components/Homepage/FundingSection'
+import HomeTextSection from '../components/Homepage/HomeTextSection'
+import HomeCareersSection from '../components/Homepage/HomeCareersSection'
+import HomeEducationSection from '../components/Homepage/HomeEducationSection'
+import HomeFundingSection from '../components/Homepage/HomeFundingSection'
 import SectionWrapper from '../components/Homepage/SectionWrapper'
 import Layout from '../components/layout'
 
 const IndexPage = () => (
   <>
     <Layout>
-      <HomeSection />   
+      <HomeTextSection />   
       <SectionWrapper bgColour={'#BDBDBD'}>
-        <CareersSection />
+        <HomeCareersSection />
       </SectionWrapper>
-      <EducationSection />
-      <FundingSection />
+      <HomeEducationSection />
+      <HomeFundingSection />
     </Layout>
   </>
 )
