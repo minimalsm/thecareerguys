@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 import FundingOption from './FundingOption'
 import OtherPagesLinkContainer from '../Navigation/OtherPagesLinkContainer'

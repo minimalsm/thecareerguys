@@ -28,11 +28,6 @@ export default function PieChart({ name, soc, scotlandSalary }) {
       .catch(() => setErrorOnPayFetch(true))
   }, [])
 
-  console.log('s ', scotlandSalary)
-  console.log('ni: ', northernIrelandSalary)
-  console.log('w: ', walesSalary)
-
-
   //Return null if the data isn't sufficient to properly render a Pie chart
   if (errorOnPayFetch) return null
   

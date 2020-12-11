@@ -10,7 +10,7 @@ const EducationSection = () => {
   const [ universities, setUniversities ] = useState([])
   const [ loading, setLoading ] = useState(false)
   const [ currentPage, setCurrentPage ] = useState(1)
-  const [ itemsPerPage ] = useState(25)
+  const [ itemsPerPage ] = useState(50)
 
   useEffect(() => {
     async function fetchData() {
@@ -28,7 +28,6 @@ const EducationSection = () => {
     }
 
     fetchData()
-    console.log(universities)
   }, [])
 
   // Pagination //

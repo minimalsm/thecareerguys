@@ -3,12 +3,10 @@ import styled from 'styled-components'
 
 const StyledDiv = styled.div`
   margin: 25px 0;
-
   ul {
     list-style: none;
     margin: auto;
   }
-
   li {
     display: inline-block;
     border: 1px solid #bdbdbd;
@@ -16,14 +14,12 @@ const StyledDiv = styled.div`
     padding: 3px 9px;
     margin: 0;
     margin-right: 6px;
-
     :hover {
       cursor: pointer;
       background-color: #094EC3;
       color: #fff;
     }
   }
-
   .current {
     background-color: #094EC3;
     color: #fff;
@@ -32,6 +28,7 @@ const StyledDiv = styled.div`
 `
 
 const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
+  //Empty array to hold pageNumbers
   const pageNumbers = []
 
   // Gets the correct amount of page numbers based on the number of items
@@ -45,7 +42,7 @@ const Pagination = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
       <ul>
         {pageNumbers.map((number) => (
           <>
-            {number === currentPage 
+            {number === currentPage //This adds CSS class if the current page is currently selected
               ? <li className="current" key={number} onClick={() => {paginate(number)}}>{number}</li>
               : <li key={number} onClick={() => {paginate(number)}}>{number}</li>
             }
