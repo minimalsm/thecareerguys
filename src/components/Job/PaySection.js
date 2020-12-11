@@ -15,8 +15,25 @@ justify-content: center;
   }
 `
 
+//Returns a string depending on if the salary is more or less than the scotlandAverageSalary
+const salaryPercentCalculate = (scotlandSalary, scotlandAverageSalary) => {
+  if (scotlandSalary > scotlandAverageSalary) {
+    const increase = scotlandSalary - scotlandAverageSalary
+    const increasePercent = Math.floor((increase / scotlandAverageSalary) * 100)
+    const increaseString = `This is ${increasePercent}% more than the Scottish average of £${scotlandAverageSalary}.`
+    return increaseString
+  } else {
+    const decrease = scotlandAverageSalary - scotlandSalary
+    const decreasePercent = Math.floor((decrease / scotlandSalary) * 100)
+    const decreaseString = `This is ${decreasePercent}% less than the Scottish average of £${scotlandAverageSalary}.`
+    return decreaseString
+  }
+}
+
 const PaySection = ({ name, soc, scotlandSalary}) => {
-  const ukAverageSalary = 25000
+  const scotlandAverageSalary = 25000 //From gov.scot report
+
+
 
   //If the API has no pay data for this Career
   if (scotlandSalary === 0) {
@@ -31,7 +48,7 @@ const PaySection = ({ name, soc, scotlandSalary}) => {
   return (
     <div>
       <h2>Pay</h2>
-      <p>The average salary for people in this profession is £{scotlandSalary}. This is x% higher than the UK average. {ukAverageSalary}</p>
+      <p>The average salary for people in this profession is £{scotlandSalary}. {salaryPercentCalculate(scotlandSalary, scotlandAverageSalary)}</p>
 
       <FlexContainer>
         <BarChart class="chart" name={name} salary={scotlandSalary}/>

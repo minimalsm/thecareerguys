@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import React, { useState } from 'react'
+import React from 'react'
 import { navigate } from 'gatsby'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
