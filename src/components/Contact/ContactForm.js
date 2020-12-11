@@ -8,34 +8,19 @@ import axios from 'axios'
 
 const StyledContactForm = styled.div`
   flex: 1 1 50%;
-
   form {
     display: flex;
     flex-direction: column;
   }
-
   form input, form textarea {
     margin: 5px 0px 0px 0px;
   }
-
   label {
     margin-top: 13px;
   }
-
   textarea {
     height: 25vh;
   }
-
-  button {
-    margin-top: 15px;
-  }
-
-  .error {
-    margin: 0;
-    padding: 0;
-    color: red;
-  }
-
   button {
     display: block;
     padding: 8px;
@@ -46,18 +31,23 @@ const StyledContactForm = styled.div`
     width: 100%;
     margin: auto;
     margin-top: 15px;
-
+    
     font-family: 'Raleway';
     font-weight: 700;
     text-decoration: none;
     background-color: #094EC3;
     color: #fff;
     text-align: center;
-
-  :hover {
+    
+    :hover {
       background-color: #0A5FCF;
     }
   }  
+  .error {
+    margin: 0;
+    padding: 0;
+    color: red;
+  }
 `
 
 const Warning = ({ errorType }) => (
@@ -75,7 +65,7 @@ const ContactForm = () => {
     
     axios({
       method: 'post',
-      url: '../api/insertMessage.php',
+      url: 'http://192.168.64.2/api/insertMessage.php',
       headers: { 'content-type': 'application/json' },
       data: data
     })

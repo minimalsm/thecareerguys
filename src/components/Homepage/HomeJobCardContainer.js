@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import JobCard from '../JobCard'
 import MoreButton from './MoreButton'
 
-
 const StyledJobCardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +10,6 @@ const StyledJobCardContainer = styled.div`
     flex: 1 1 40%;
   }
 `
-
 
 const HomeJobCardContainer = () => {
   const [ showAll, setShowAll ] = useState(false)
@@ -28,8 +26,7 @@ const HomeJobCardContainer = () => {
       <JobCard class='jobcard' title={'Design and development engineers'} soc={2126} salary={53040} />
       <JobCard class='jobcard' title={'Dancers and choreographers'} soc={3414} salary={0} />
 
-
-
+      {/* If the show all button has been clicked show all 8 jobcards, else show the showmore button */}
       {showAll ?  
         (
           <>

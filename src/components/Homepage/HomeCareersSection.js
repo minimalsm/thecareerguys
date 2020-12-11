@@ -10,7 +10,7 @@ const StyledSection = styled.section`
   padding-bottom: 25px;
 `
 
-const HomeEducationSection = () => {
+const HomeCareersSection = () => {
   return (
     <StyledSection>
       <h2>Popular Careers</h2>
@@ -19,4 +19,4 @@ const HomeEducationSection = () => {
   )
 }
 
-export default HomeEducationSection
+export default HomeCareersSection

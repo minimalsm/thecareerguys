@@ -8,7 +8,6 @@ import TypingMan from '../images/man-typing.svg'
 import Animate, { Bounce, RotateInDownLeft } from 'animate-css-styled-components'
 
 const FlexContainer = styled.div`
-
   margin: 0 auto;
   max-width: 1024px;
   padding: 0 1.0875rem 1.45rem;
@@ -16,7 +15,6 @@ const FlexContainer = styled.div`
   justify-content: space-between;
   flex: 1 1 auto;
   margin-bottom: 50px;
-
   @media screen and (max-width: 500px) {
     margin-bottom: 20px;
   }
@@ -26,7 +24,6 @@ const StyledAnimate = styled(Animate)`
   flex: 1 1 auto;
   align-self: center;
   margin-right: 30px;
-
   /* Hide illustration on smaller screensizes */
   @media only screen and (max-width: 800px) {
     display: none;
@@ -41,7 +38,7 @@ const StyledImg = styled.img`
 const ContactPage = () => (
   <Layout>
     <FlexContainer>
-    
+      {/* StyledImg component MUST be wrapped in the animate component in order to animate */}
       <StyledAnimate 
         Animation={[RotateInDownLeft, Bounce]}
         duration={['3s', '3s']}
@@ -49,7 +46,6 @@ const ContactPage = () => (
       >        <StyledImg src={TypingMan} />
       </StyledAnimate>
       <ContactForm />
-
     </FlexContainer>
   </Layout>
 )

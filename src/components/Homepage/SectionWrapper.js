@@ -6,7 +6,6 @@ const StyledDiv = styled.div`
   border-radius: 10px;
 `
 
-
 const SectionWrapper = (props) => {
   return (
     <StyledDiv>
