@@ -6,7 +6,6 @@ export default function PieChart({ name, soc, scotlandSalary }) {
   const [ northernIrelandSalary, setNorthernIrelandSalary] = useState(0)
   const [ errorOnPayFetch, setErrorOnPayFetch ] = useState(false)
 
-
   const getMostRecentSalary = (data) => {
     const payDataByYear = data.series.sort((a, b) => b.year - a.year)
     const mostRecentWeeklyWage = payDataByYear[0].estpay
@@ -14,6 +13,7 @@ export default function PieChart({ name, soc, scotlandSalary }) {
     return mostRecentSalary
   }
 
+  // Get salary for Wales
   useEffect(() => {
     fetch(`https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A10`)
       .then(response => response.json()) 
@@ -21,6 +21,7 @@ export default function PieChart({ name, soc, scotlandSalary }) {
       .catch(() => setErrorOnPayFetch(true))
   }, [])
 
+  // Get salary for Northern Ireland
   useEffect(() => {
     fetch(`https://api.lmiforall.org.uk/api/v1/ashe/estimatePay?soc=${soc}&filters=region%3A12`)
       .then(response => response.json())

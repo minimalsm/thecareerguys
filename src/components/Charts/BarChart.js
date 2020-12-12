@@ -6,7 +6,7 @@ const BarChart = ({name, salary}) => {
     <div>
       <HorizontalBar
         data={{
-          labels: ['Scottish Average', `${name} in Scotland` ],
+          labels: ['Average', 'This Job' ],
           datasets: [
             {
               label: 'Salary',
@@ -14,10 +14,7 @@ const BarChart = ({name, salary}) => {
                 '#7347CC',
                 '#3e95cd',
               ],
-              hoverBackgroundColor: [
-        
-              ],
-              data: [31356, salary, 0]
+              data: [25000, salary, 0]
             }
           ]
         }}

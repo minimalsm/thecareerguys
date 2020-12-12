@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
     <img alt="Gatsby" src="./src/images/joshua-douglas.png" width="60" />
   </a>
@@ -35,9 +34,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 4.  **`pages`**: At build time these pages will be converted to the html pages that make up the website.
 
 5.  **`styles`**: This is only used for some global styling. However, the majority of the styling is done through custom styled components.
-
-## 🎓 A few notes
-
 
 ## 💫 Live
 

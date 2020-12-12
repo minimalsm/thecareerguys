@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import JobCard from '../JobCard'
-import Search from '../Search'
+import JobCard from '../Shared/JobCard'
+import Search from './Search'
 import PlaceholderJobs from './PlaceholderJobs'
 
 export const CareersSection = () => {

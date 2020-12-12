@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import JobCard from '../JobCard'
+import JobCard from '../Shared/JobCard'
 import MoreButton from './MoreButton'
 
 const StyledJobCardContainer = styled.div`
