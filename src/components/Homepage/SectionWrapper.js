@@ -1,11 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledDiv = styled.div`
-  background: #bdbdbd;
-  border-radius: 10px;
-`
-
 const SectionWrapper = (props) => {
   return (
     <StyledDiv>
@@ -15,3 +10,8 @@ const SectionWrapper = (props) => {
 }
 
 export default SectionWrapper
+
+const StyledDiv = styled.div`
+  background: #bdbdbd;
+  border-radius: 10px;
+`

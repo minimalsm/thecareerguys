@@ -3,12 +3,6 @@ import React from 'react'
 import styled from 'styled-components'
 import StyledLink from '../Navigation/StyledLink'
 
-const StyledSection = styled.section`
-  margin: 20px auto 0px auto;
-  max-width: 1024px;
-  padding: 0 1.0875rem 1.45rem;
-`
-
 const HomeEducationSection = () => {
   return (
     <StyledSection>
@@ -20,3 +14,9 @@ const HomeEducationSection = () => {
 }
 
 export default HomeEducationSection
+
+const StyledSection = styled.section`
+  margin: 20px auto 0px auto;
+  max-width: 1024px;
+  padding: 0 1.0875rem 1.45rem;
+`

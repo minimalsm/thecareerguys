@@ -1,6 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const MoreButton = (props) => {
+  return (
+    <StyledLink onClick={props.onClick}>
+      {props.name}
+    </StyledLink>
+  )
+}
+
+export default MoreButton
+
 const StyledLink = styled.span`
   margin: auto;
   width: 45%;
@@ -21,11 +31,3 @@ const StyledLink = styled.span`
     border-color: black;
   }
 `
-
-export default function MoreButton(props) {
-  return (
-    <StyledLink onClick={props.onClick}>
-      {props.name}
-    </StyledLink>
-  )
-}

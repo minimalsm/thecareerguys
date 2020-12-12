@@ -3,14 +3,6 @@ import styled from 'styled-components'
 import JobCard from '../Shared/JobCard'
 import MoreButton from './MoreButton'
 
-const StyledJobCardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  .jobcard {
-    flex: 1 1 40%;
-  }
-`
-
 const HomeJobCardContainer = () => {
   const [ showAll, setShowAll ] = useState(false)
   
@@ -45,3 +37,11 @@ const HomeJobCardContainer = () => {
 }
 
 export default HomeJobCardContainer
+
+const StyledJobCardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  .jobcard {
+    flex: 1 1 40%;
+  }
+`
