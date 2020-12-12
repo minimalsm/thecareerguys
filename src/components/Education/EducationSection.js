@@ -12,6 +12,10 @@ const EducationSection = () => {
   const [ currentPage, setCurrentPage ] = useState(1)
   const [ itemsPerPage ] = useState(50)
 
+  //Whilst waiting on the data returning from the request set loading to true
+  //If the response is successful set data and change loading back to false
+  //The catch sets the data to a localCopy of the data because when the site is deployed
+  //It cannot access the API link due to it not being secure
   useEffect(() => {
     async function fetchData() {
       setLoading(true)
@@ -26,16 +30,15 @@ const EducationSection = () => {
           setLoading(false)
         })
     }
-
     fetchData()
   }, [])
 
   // Pagination //
-  // Get current universities
-  const indexOfLastItem = currentPage * itemsPerPage
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage
-  const currentItems = universities.slice(indexOfFirstItem, indexOfLastItem)
+  const indexOfLastItem = currentPage * itemsPerPage //The index in the universities array of the last item to be displayed on that 'page'
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage //The index in the universities array of the first item to be displayed on that 'page'
+  const currentItems = universities.slice(indexOfFirstItem, indexOfLastItem) //An array containing only items to be displayed on the current 'page'
   //Change page
+  //Takes in the pageNumber and updates the state accordingly (causing a refresh)
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
   return (
@@ -46,10 +49,16 @@ const EducationSection = () => {
       <Animate 
         Animation={[FadeInUp]} 
         duration="0.8s" 
-        delay="0s">
+        delay="0s"
+      >
         <UniversitiesContainer universities={currentItems} loading={loading} />
       </Animate>
-      <Pagination itemsPerPage={itemsPerPage} totalItems={universities.length} paginate={paginate} currentPage={currentPage}/>
+      <Pagination 
+        itemsPerPage={itemsPerPage} 
+        totalItems={universities.length} 
+        paginate={paginate} 
+        currentPage={currentPage}
+      />
       <OtherPagesLinkContainer
         firstName={'Explore Careers'}
         firstLink={'careers'}

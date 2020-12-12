@@ -2,12 +2,11 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { graphql } from 'gatsby'
-
 import FundingSection from '../components/Funding/FundingSection'
 
 const FundingPage = ({ data }) => (
   <Layout>
-    <SEO title="Funding" />
+    <SEO title="Funding Options" />
     <FundingSection data={data} />
   </Layout>
 )
