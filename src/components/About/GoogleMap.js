@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react'
 import styled from 'styled-components'
 
 const GoogleMap = () => {
-  const zoomLevel = 18
+  const zoomLevel = 15
   const location = {
     address: '40 St Vincent Crescent, Glasgow, G3 8LQ',
     lat: 55.864444,
@@ -14,6 +14,7 @@ const GoogleMap = () => {
     <MapDiv className="map">
 
       <GoogleMapReact
+        bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API }}
         defaultCenter={location}
         defaultZoom={zoomLevel}
       />
