@@ -3,11 +3,45 @@ import styled from 'styled-components'
 import { AiOutlineToTop as TopIcon } from 'react-icons/ai'
 import { Link } from 'gatsby'
 
+const Footer = () => {
+  return (
+    <StyledFooter>
+      <div className='address'>
+        <a href="https://goo.gl/maps/swqYvDaGpcGv64QcA">
+        40 St Vincent Crescent
+          <br/>
+          Glasgow
+          <br/>
+          G3 8LQ
+          <br/>
+          Scotland
+        </a>
+      </div>
+
+      <div className='contact'>
+        <p><a className='contact-item' href="tel:01411234567">0141 123 4567</a></p>
+        <p><a className='contact-item' href="mailto:hello@thecareerguys.com">hello@thecareerguys.com</a></p>
+      </div>
+      
+      <div className='links'>
+        <div className='home'>
+          <h2><Link to='/'>Home</Link></h2>
+        </div>
+        <div className='top'>
+          <a href="#top"><i><TopIcon /></i></a>
+          <a href="#top"><h2>Top</h2></a>
+        </div>
+      </div>
+    </StyledFooter>
+  )
+}
+
+export default Footer
+
 const StyledFooter = styled.footer`
   border-top: 1px solid #bdbdbd;
   max-width: 1024px;
   margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -86,38 +120,3 @@ const StyledFooter = styled.footer`
       }
   }
 `
-
-const Footer = () => {
-  return (
-    <StyledFooter>
-      <div className='address'>
-        <a href="https://goo.gl/maps/swqYvDaGpcGv64QcA">
-          40 St Vincent Crescent
-          <br/>
-          Glasgow
-          <br/>
-          G3 8LQ
-          <br/>
-          Scotland
-        </a>
-      </div>
-
-      <div className='contact'>
-        <p><a className='contact-item' href="tel:01411234567">0141 123 4567</a></p>
-        <p><a className='contact-item' href="mailto:hello@thecareerguys.com">hello@thecareerguys.com</a></p>
-      </div>
-
-      <div className='links'>
-        <div className='home'>
-          <h2><Link to='/'>Home</Link></h2>
-        </div>
-        <div className='top'>
-          <a href="#top"><i><TopIcon /></i></a>
-          <a href="#top"><h2>Top</h2></a>
-        </div>
-      </div>
-    </StyledFooter>
-  )
-}
-
-export default Footer

@@ -8,3 +8,5 @@ html, body, p {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
 }
+
+/* Only includes setting typography globals and importing fonts, all other styles are done in component using StyleComponents */
