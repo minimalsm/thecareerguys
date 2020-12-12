@@ -5,11 +5,10 @@ import SEO from '../components/seo'
 import AboutSection from '../components/About/AboutSection'
 
 
-
 const AboutPage = ({ data }) => (
   <Layout>
     <SEO title="About Us" />
-    <AboutSection data={data} />  
+    <AboutSection data={data} />  {/* Data is passed in from the graphql query which fetches the images used */}
   </Layout>
 )
 

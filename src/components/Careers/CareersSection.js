@@ -19,15 +19,19 @@ export const CareersSection = () => {
     fetchData(target.value)
   }
 
-  async function fetchData(value) {
+  function fetchData(value) {
     fetch(`https://api.lmiforall.org.uk/api/v1/soc/search?q=${value}`)
       .then(response => response.json())
       .then(resultData => {
         setResults(resultData)
       })
-      .catch(error => console.log(error))
-
   }
+
+  // const fetchDataTwo = async (value) => {
+  //   const response = await fetch(`https://api.lmiforall.org.uk/api/v1/soc/search?q=${value}`)
+  //   const data = await response.json()
+  //   setResults(data)
+  // }
 
   const resultsFiltered = results.filter((result, idx) => idx < 10)
   const len = resultsFiltered.length
