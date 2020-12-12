@@ -1,19 +1,14 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 import JobCard from '../JobCard'
 import Search from '../Search'
 import PlaceholderJobs from './PlaceholderJobs'
-import styled from 'styled-components'
-
-const StyledDiv = styled.div`
-  margin: 0 auto;
-  max-width: 1024px;
-  padding: 0 1.0875rem 1.45rem;
-`
 
 export const CareersSection = () => {
   const [ searchTerm, setSearchTerm ] = useState('')
   const [ results, setResults ] = useState([])
 
+  //Anytime a character is typed into the searchTerm we will rerun the search
   const handleNewSearch = ({ target }) => {
     setSearchTerm(target.value)
     fetchData(target.value)
@@ -27,15 +22,8 @@ export const CareersSection = () => {
       })
   }
 
-  // const fetchDataTwo = async (value) => {
-  //   const response = await fetch(`https://api.lmiforall.org.uk/api/v1/soc/search?q=${value}`)
-  //   const data = await response.json()
-  //   setResults(data)
-  // }
-
   const resultsFiltered = results.filter((result, idx) => idx < 10)
   const len = resultsFiltered.length
-
 
   return (
     <StyledDiv>
@@ -44,7 +32,11 @@ export const CareersSection = () => {
         value={searchTerm}
         onChange={handleNewSearch}
       />
-
+      {/* 
+          If no search has been done then display Placeholder jobs
+          If a search has been done and their are results for that search them render
+          a jobcard for each of the results
+      */}
       {resultsFiltered && len > 0 
         ? 
         (
@@ -59,3 +51,9 @@ export const CareersSection = () => {
     </StyledDiv>
   )
 }
+
+const StyledDiv = styled.div`
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 1.0875rem 1.45rem;
+`

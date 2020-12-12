@@ -3,37 +3,8 @@ import styled from 'styled-components'
 import BarChart from '../Charts/BarChart'
 import PieChart from '../Charts/PieChart'
 
-const FlexContainer = styled.div`
-display: flex; 
-flex-direction: column; 
-flex-wrap: wrap;
-justify-content: center;
-
-  .chart {
-    flex: 1;
-    max-width: 100%;
-  }
-`
-
-//Returns a string depending on if the salary is more or less than the scotlandAverageSalary
-const salaryPercentCalculate = (scotlandSalary, scotlandAverageSalary) => {
-  if (scotlandSalary > scotlandAverageSalary) {
-    const increase = scotlandSalary - scotlandAverageSalary
-    const increasePercent = Math.floor((increase / scotlandAverageSalary) * 100)
-    const increaseString = `This is ${increasePercent}% more than the Scottish average of £${scotlandAverageSalary}.`
-    return increaseString
-  } else {
-    const decrease = scotlandAverageSalary - scotlandSalary
-    const decreasePercent = Math.floor((decrease / scotlandSalary) * 100)
-    const decreaseString = `This is ${decreasePercent}% less than the Scottish average of £${scotlandAverageSalary}.`
-    return decreaseString
-  }
-}
-
 const PaySection = ({ name, soc, scotlandSalary}) => {
   const scotlandAverageSalary = 25000 //From gov.scot report
-
-
 
   //If the API has no pay data for this Career
   if (scotlandSalary === 0) {
@@ -44,6 +15,20 @@ const PaySection = ({ name, soc, scotlandSalary}) => {
     </div>
   }
 
+  //Returns a string depending on if the salary is more or less than the scotlandAverageSalary
+  const salaryPercentCalculate = (scotlandSalary, scotlandAverageSalary) => {
+    if (scotlandSalary > scotlandAverageSalary) {
+      const increase = scotlandSalary - scotlandAverageSalary
+      const increasePercent = Math.floor((increase / scotlandAverageSalary) * 100)
+      const increaseString = `This is ${increasePercent}% more than the Scottish average of £${scotlandAverageSalary}.`
+      return increaseString
+    } else {
+      const decrease = scotlandAverageSalary - scotlandSalary
+      const decreasePercent = Math.floor((decrease / scotlandSalary) * 100)
+      const decreaseString = `This is ${decreasePercent}% less than the Scottish average of £${scotlandAverageSalary}.`
+      return decreaseString
+    }
+  }
 
   return (
     <div>
@@ -59,3 +44,14 @@ const PaySection = ({ name, soc, scotlandSalary}) => {
 }
 
 export default PaySection
+
+const FlexContainer = styled.div`
+display: flex; 
+flex-direction: column; 
+flex-wrap: wrap;
+justify-content: center;
+.chart {
+  flex: 1;
+  max-width: 100%;
+}
+`

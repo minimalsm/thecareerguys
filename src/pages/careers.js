@@ -4,7 +4,6 @@ import SEO from '../components/seo'
 import { CareersSection } from '../components/Careers/CareersSection'
 
 const CareersPage = () => {
-
   return (
     <Layout>
       <SEO title="Careers" />

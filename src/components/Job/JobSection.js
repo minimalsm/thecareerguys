@@ -30,12 +30,6 @@ const JobSection = ({ soc }) => {
       .catch(error => console.log(error))
   }, [])
 
-  const StyledDiv = styled.div`
-  margin: 0 auto;
-  max-width: 1024px;
-  padding: 0 1.0875rem 1.45rem;
-`
-  
   return (
     <StyledDiv>
       <h1>{jobData.title}</h1>
@@ -49,9 +43,14 @@ const JobSection = ({ soc }) => {
         soc={soc}
         scotlandSalary={scotlandSalary}
       />
-    </StyledDiv>
-    
+    </StyledDiv> 
   )
 }
 
 export default JobSection
+
+const StyledDiv = styled.div`
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 1.0875rem 1.45rem;
+`
