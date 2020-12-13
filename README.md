@@ -56,8 +56,8 @@ I have Gatsby running on localhost:8000 and the db/php running on an XAMPP serve
 
 
 <div align="center">
-  <img alt="contactform" src="./README_images/contact-form-example.gif" width="80%" />
-  <img alt="database" src="./README_images/database-success.png" width="80%" />
+  <img alt="contactform" src="./README_Images/contact-form-example.gif" width="80%" />
+  <img alt="database" src="./README_Images/database-success.png" width="80%" />
 </div>
 
 ### Gatsby Routing
@@ -65,19 +65,19 @@ I have Gatsby running on localhost:8000 and the db/php running on an XAMPP serve
 Also discussed with Jacob, sometimes (usually just after running the local server) Gatsby Link components will not work on first attempt but do work on refresh. **This is not an error**. This is due to the Gatsby build process and how it optimises links in production.
 
 <div align="center">
-  <img alt="database" src="./README_images/links-issue.gif" width="80%" />
+  <img alt="database" src="./README_Images/links-issue.gif" width="80%" />
 </div>
 
 ### Original Design (Figma View)
 
 <div align="center">
-  <img alt="design" src="./README_images/design.png" width="80%" />
+  <img alt="design" src="./README_Images/dEesign.png" width="80%" />
 </div>
 
 ### Final Development (Browser View)
 
 <div align="center">
-  <img alt="design" src="./README_images/development.png" width="80%" />
+  <img alt="design" src="./README_Images/dEevelopment.png" width="80%" />
 </div>
 
 
