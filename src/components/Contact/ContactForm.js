@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import React, { useState } from 'react'
+import React from 'react'
 import { navigate } from 'gatsby'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
@@ -49,8 +49,7 @@ const ContactForm = () => {
   return (
     <StyledContactForm>
       <h1>Contact Us</h1>   
-      <form onSubmit={handleSubmit(onSubmit)} action="/">
-        
+      <form onSubmit={handleSubmit(onSubmit)} action="/">  
         <label htmlFor="name">Name</label>
         <input id="name" name="name" type="text" ref={register({ required: true, minLength: 2})}></input>
         {errors.name && <Warning class="error" errorType={'valid name'} />}
