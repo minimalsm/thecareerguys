@@ -19,4 +19,9 @@ const StyledSection = styled.section`
   margin: 20px auto 0px auto;
   max-width: 1024px;
   padding: 0 1.0875rem 1.45rem;
+  @media only screen and (min-width: 800px) {
+    a {
+      width: 500px;
+    }
+  }
 `

@@ -12,6 +12,6 @@ const SectionWrapper = (props) => {
 export default SectionWrapper
 
 const StyledDiv = styled.div`
-  background: #bdbdbd;
+  background: #CFD8DC;
   border-radius: 10px;
 `

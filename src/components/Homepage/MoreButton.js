@@ -13,7 +13,9 @@ export default MoreButton
 
 const StyledLink = styled.span`
   margin: auto;
-  width: 45%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 300px;
   padding: 12px 8px;
   border: 1px solid #094EC3;
   border-right-width: 4px;
@@ -29,5 +31,8 @@ const StyledLink = styled.span`
     color: #fff;
     background: #094EC3;
     border-color: black;
+  }
+  @media only screen and (max-width: 360px) {
+    width: 150px;
   }
 `

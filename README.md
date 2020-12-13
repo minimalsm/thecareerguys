@@ -68,6 +68,21 @@ Also discussed with Jacob, sometimes (usually just after running the local serve
   <img alt="database" src="./README_images/links-issue.gif" width="80%" />
 </div>
 
+### Original Design (Figma View)
+
+<div align="center">
+  <img alt="design" src="./README_images/design.png" width="80%" />
+</div>
+
+### Final Development (Browser View)
+
+<div align="center">
+  <img alt="design" src="./README_images/development.png" width="80%" />
+</div>
+
+
+
+
 
 ## 💫 Live
 
