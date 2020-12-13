@@ -71,13 +71,13 @@ Also discussed with Jacob, sometimes (usually just after running the local serve
 ### Original Design (Figma View)
 
 <div align="center">
-  <img alt="design" src="./README_Images/dEesign.png" width="80%" />
+  <img alt="design" src="./README_Images/design.png" width="80%" />
 </div>
 
 ### Final Development (Browser View)
 
 <div align="center">
-  <img alt="design" src="./README_Images/dEevelopment.png" width="80%" />
+  <img alt="design" src="./README_Images/development.png" width="80%" />
 </div>
 
 
