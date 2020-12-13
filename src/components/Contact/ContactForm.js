@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-import React from 'react'
+import React, { useState } from 'react'
 import { navigate } from 'gatsby'
 import styled from 'styled-components'
 import { useForm } from 'react-hook-form'
@@ -17,7 +17,7 @@ const ContactForm = () => {
   const { register, handleSubmit, errors } = useForm()
   const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   
-  const onSubmit = (data, e) => {    
+  const onSubmit = (data, e) => { 
     axios({
       method: 'post',
       url: 'http://192.168.64.2/api/insertMessage.php',
@@ -28,7 +28,19 @@ const ContactForm = () => {
         e.target.reset()
         navigate('/submitted', { replace: true })
       })
-      .catch((error) => console.error(error))
+      .catch((error) => {
+        // Code snippet taken from axios error handling docs at (https://github.com/axios/axios#handling-errors)
+        if (error.response) {
+          console.log(error.response.data);
+          console.log(error.response.status);
+          console.log(error.response.headers);
+        } else if (error.request) {
+          console.log(error.request);
+        } else {
+          console.log('Error', error.message);
+        }
+        console.log(error.config);
+      })
   }
   
   // lines such as 
@@ -38,6 +50,7 @@ const ContactForm = () => {
     <StyledContactForm>
       <h1>Contact Us</h1>   
       <form onSubmit={handleSubmit(onSubmit)} action="/">
+        
         <label htmlFor="name">Name</label>
         <input id="name" name="name" type="text" ref={register({ required: true, minLength: 2})}></input>
         {errors.name && <Warning class="error" errorType={'valid name'} />}
