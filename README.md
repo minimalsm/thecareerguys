@@ -1,6 +1,5 @@
 <p align="center">
     <img alt="Gatsby" src="./src/images/joshua-douglas.png" width="60" />
-  </a>
 </p>
 <h1 align="center">
   TheCareerGuys by Joshua Douglas
@@ -13,6 +12,19 @@
 * StyledComponents for styling
 * GraphQL for fetching images from CDN
 * PHP for saving contact forms to the backend
+
+
+## 🤷🏻‍ How to run it locally
+
+In your terminal
+
+    $ cd thecareerguys
+    $ npm install
+    $ npm install -g gatsby-cli
+    $ gatsby develop
+
+Then navigate to localhost:8000 in the browser
+
 
 ## 🧐 Structure?
 
@@ -34,6 +46,28 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 4.  **`pages`**: At build time these pages will be converted to the html pages that make up the website.
 
 5.  **`styles`**: This is only used for some global styling. However, the majority of the styling is done through custom styled components.
+
+## 🤓 Notes
+
+### Database 
+
+As discussed with Jacob, the backend and frontend are seperated for the application. This is due to opionated Gatsby routing.
+I have Gatsby running on localhost:8000 and the db/php running on an XAMPP server. The deployed version of the site does **not** submit to any database so although I do have it working locally the contact form is not working on the link provided below. I have attached a working example of this on localhost. 
+
+
+<div align="center">
+  <img alt="contactform" src="./README_images/contact-form-example.gif" width="80%" />
+  <img alt="database" src="./README_images/database-success.png" width="80%" />
+</div>
+
+### Gatsby Routing
+
+Also discussed with Jacob, sometimes (usually just after running the local server) Gatsby Link components will not work on first attempt but do work on refresh. **This is not an error**. This is due to the Gatsby build process and how it optimises links in production.
+
+<div align="center">
+  <img alt="database" src="./README_images/links-issue.gif" width="80%" />
+</div>
+
 
 ## 💫 Live
 
